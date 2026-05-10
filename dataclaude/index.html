@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salesforce Data Cloud Consultant Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon-16x16.png" />
+  <script>
+    window.QUIZ_CONFIG = {
+      dataFile: './data_cloud_consultant.json',
+      passThreshold: 0.65
+    };
+  </script>
+</head>
+<body>
+
+  <!-- Tela Inicial -->
+  <div id="startScreen" class="screen active">
+    <div class="start-card">
+      <a href="../" class="hub-back-link">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Todas as Certificações
+      </a>
+      <div class="logo-badge logo-badge--datacloud">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 17.58A5 5 0 0018 8h-1.26A8 8 0 104 16.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="16 16 12 12 8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="12" y1="12" x2="12" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h1 class="start-title">Data Cloud Consultant</h1>
+      <p class="start-subtitle">Certificação Especialista</p>
+      <p class="start-description">
+        Teste seus conhecimentos - Salesforce Data Cloud Consultant.
+      </p>
+      <div class="start-stats">
+        <div class="stat-item">
+          <span class="stat-number" id="totalQuestionsCount">—</span>
+          <span class="stat-label">Perguntas</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">65%</span>
+          <span class="stat-label">Aprovação</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">Ilimitado</span>
+          <span class="stat-label">Tentativas</span>
+        </div>
+      </div>
+      <button id="startBtn" class="btn-primary" disabled>
+        <span class="btn-text">Carregando...</span>
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="start-hint">As perguntas são embaralhadas a cada tentativa</p>
+    </div>
+  </div>
+
+  <!-- Tela do Quiz -->
+  <div id="quizScreen" class="screen">
+    <div class="quiz-container">
+
+      <header class="quiz-header">
+        <div class="quiz-brand">Data Cloud Quiz</div>
+        <div class="quiz-meta">
+          <span id="questionCounter" class="question-counter">1 / 20</span>
+          <div class="score-badge">
+            <span class="score-label">Pontos</span>
+            <span id="scoreDisplay" class="score-value">0</span>
+          </div>
+          <button id="exitBtn" class="btn-exit" title="Sair do quiz">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="progress-track">
+        <div id="progressBar" class="progress-fill"></div>
+      </div>
+
+      <main class="quiz-body">
+        <div id="questionCard" class="question-card">
+          <div class="question-tag" id="questionTag">Pergunta 1</div>
+          <h2 id="questionText" class="question-text"></h2>
+          <p id="multipleHint" class="multiple-hint hidden">Selecione todas as respostas corretas</p>
+          <div id="answersContainer" class="answers-grid"></div>
+        </div>
+
+        <div id="feedbackBanner" class="feedback-banner hidden">
+          <div class="feedback-icon" id="feedbackIcon"></div>
+          <div class="feedback-content">
+            <p class="feedback-title" id="feedbackTitle"></p>
+            <p class="feedback-detail" id="feedbackDetail"></p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="quiz-footer">
+        <button id="clearBtn" class="btn-secondary">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Limpar
+        </button>
+        <button id="nextBtn" class="btn-primary" style="display:none;">
+          <span class="btn-text">Confirmar</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- Tela de Resultado -->
+  <div id="resultScreen" class="screen">
+    <div class="result-card">
+      <div id="resultBadge" class="result-badge"></div>
+      <h2 id="resultTitle" class="result-title"></h2>
+      <p id="resultSubtitle" class="result-subtitle"></p>
+
+      <div class="result-score-ring">
+        <svg viewBox="0 0 120 120" class="ring-svg">
+          <circle cx="60" cy="60" r="50" class="ring-bg"/>
+          <circle cx="60" cy="60" r="50" class="ring-fill" id="ringFill"/>
+        </svg>
+        <div class="ring-label">
+          <span id="resultPercent" class="ring-percent">0%</span>
+          <span class="ring-sub">Acertos</span>
+        </div>
+      </div>
+
+      <div class="result-stats">
+        <div class="result-stat correct-stat">
+          <span id="correctCount" class="rstat-num">0</span>
+          <span class="rstat-label">Corretas</span>
+        </div>
+        <div class="result-stat incorrect-stat">
+          <span id="incorrectCount" class="rstat-num">0</span>
+          <span class="rstat-label">Incorretas</span>
+        </div>
+        <div class="result-stat total-stat">
+          <span id="totalCount" class="rstat-num">0</span>
+          <span class="rstat-label">Total</span>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button id="restartBtn" class="btn-primary">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M1 4v6h6M23 20v-6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 013.51 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Tentar Novamente
+        </button>
+        <button id="backHomeBtn" class="btn-secondary">Voltar ao Início</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmação de saída -->
+  <div id="exitModal" class="overlay hidden">
+    <div class="confirm-card">
+      <h3>Sair do quiz?</h3>
+      <p>Seu progresso atual será perdido.</p>
+      <div class="confirm-actions">
+        <button id="confirmExit" class="btn-danger">Sair</button>
+        <button id="cancelExit" class="btn-secondary">Continuar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../quiz.js"></script>
+</body>
+</html>
