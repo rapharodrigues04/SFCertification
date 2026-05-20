@@ -9,6 +9,7 @@ Plataforma de estudo para certificações Salesforce. Repositório único com qu
 | Advanced Administrator | `/advadministrator` | 65% |
 | Agentforce Specialist | `/agentforce` | 65% |
 | Data Cloud Consultant | `/dataclaude` | 65% |
+| Business Analyst | `/ba` | 72% |
 
 ## Como funciona
 
@@ -32,7 +33,10 @@ Plataforma de estudo para certificações Salesforce. Repositório único com qu
 ├── agentforce/
 │   ├── index.html
 │   └── agentforce.json
-└── dataclaude/
+├── dataclaude/
+│   ├── index.html
+│   └── data_cloud_consultant.json
+└── ba/
     ├── index.html
-    └── data_cloud_consultant.json
+    └── questions.json
 ```
