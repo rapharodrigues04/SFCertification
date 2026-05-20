@@ -800,6 +800,11 @@ body::before {
   box-shadow: 0 6px 16px rgba(14,165,233,0.3);
 }
 
+.cert-icon--ba {
+  background: linear-gradient(135deg, #10B981, #059669);
+  box-shadow: 0 6px 16px rgba(16,185,129,0.3);
+}
+
 .cert-name {
   font-size: 18px;
   font-weight: 700;
@@ -872,6 +877,12 @@ body::before {
 .logo-badge--datacloud {
   background: linear-gradient(135deg, #0EA5E9, #0369A1);
   box-shadow: 0 8px 24px rgba(14,165,233,0.35);
+}
+
+/* ── Business Analyst accent ── */
+.logo-badge--ba {
+  background: linear-gradient(135deg, #10B981, #059669);
+  box-shadow: 0 8px 24px rgba(16,185,129,0.35);
 }
 
 /* ── Responsive ── */
