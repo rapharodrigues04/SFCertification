@@ -7,7 +7,7 @@ Plataforma de estudo para certificações Salesforce. Repositório único com qu
 | Certificação | Pasta | Aprovação |
 |---|---|---|
 | Advanced Administrator | `/advadministrator` | 68% |
-| Agentforce Specialist | `/agentforce` | 65% |
+| Agentforce Specialist | `/agentforce` | 73% |
 | Data Cloud Consultant | `/dataclaude` | 65% |
 | Business Analyst | `/ba` | 72% |
 
