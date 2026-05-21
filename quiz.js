@@ -47,6 +47,7 @@ const el = {
   totalCountResult: document.getElementById('totalCount'),
   restartBtn:       document.getElementById('restartBtn'),
   backHomeBtn:      document.getElementById('backHomeBtn'),
+  livePercent:      document.getElementById('livePercent'),
 };
 
 // ── Utility ──
@@ -88,6 +89,7 @@ function startSession() {
   correctAnswers = 0;
   feedbackShown = false;
   el.scoreDisplay.textContent = '0';
+  el.livePercent.textContent = '—';
   el.ringFill.style.strokeDashoffset = 314;
   showScreen('quiz');
   renderQuestion();
@@ -189,6 +191,9 @@ function confirmAnswer() {
   } else {
     showFeedback(false, q, q.multiple ? q.correct : [Array.isArray(q.correct) ? q.correct[0] : q.correct]);
   }
+
+  const answeredSoFar = currentQuestion + 1;
+  el.livePercent.textContent = `${Math.round((correctAnswers / answeredSoFar) * 100)}%`;
 
   feedbackShown = true;
   el.nextBtn.querySelector('.btn-text').textContent =
