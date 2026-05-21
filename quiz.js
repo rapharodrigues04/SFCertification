@@ -89,7 +89,7 @@ function startSession() {
   feedbackShown = false;
   el.incorrectDisplay.textContent = '—';
   el.livePercent.textContent = '—';
-  el.livePercent.style.color = '';
+  el.livePercent.parentElement.className = 'score-badge';
   el.ringFill.style.strokeDashoffset = 314;
   showScreen('quiz');
   renderQuestion();
@@ -196,11 +196,12 @@ function confirmAnswer() {
 
   el.incorrectDisplay.textContent = `${100 - pctSoFar}%`;
   el.livePercent.textContent = `${pctSoFar}%`;
-  el.livePercent.style.color = pctSoFar >= PASS_THRESHOLD * 100
-    ? '#2ECC71'
+  const state = pctSoFar >= PASS_THRESHOLD * 100
+    ? 'score-badge--pass'
     : pctSoFar >= (PASS_THRESHOLD - 0.1) * 100
-      ? '#F39C12'
-      : '#E74C3C';
+      ? 'score-badge--warning'
+      : 'score-badge--fail';
+  el.livePercent.parentElement.className = `score-badge ${state}`;
 
   feedbackShown = true;
   el.nextBtn.querySelector('.btn-text').textContent =

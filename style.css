@@ -199,9 +199,14 @@ body::before {
   background: linear-gradient(135deg, var(--brand-dark), var(--brand));
   padding: 6px 14px;
   border-radius: 20px;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 .score-label { font-size: 11px; color: rgba(255,255,255,0.75); font-weight: 500; }
 .score-value { font-size: 14px; font-weight: 700; color: #fff; min-width: 20px; text-align: center; }
+
+.score-badge--pass    { background: linear-gradient(135deg, #1a7a45, #2ecc71); box-shadow: 0 4px 12px rgba(46,204,113,0.4); }
+.score-badge--warning { background: linear-gradient(135deg, #7a4f0d, #f39c12); box-shadow: 0 4px 12px rgba(243,156,18,0.4); }
+.score-badge--fail    { background: linear-gradient(135deg, #6b1c1c, #e74c3c); box-shadow: 0 4px 12px rgba(231,76,60,0.4); }
 
 .btn-exit {
   width: 36px;
