@@ -6,7 +6,6 @@ const SESSION_SIZE = CFG.sessionSize || 60;
 let quizData = [];
 let sessionQuestions = [];
 let currentQuestion = 0;
-let score = 0;
 let correctAnswers = 0;
 let feedbackShown = false;
 
@@ -21,7 +20,7 @@ const el = {
   totalCount:       document.getElementById('totalQuestionsCount'),
   startBtn:         document.getElementById('startBtn'),
   questionCounter:  document.getElementById('questionCounter'),
-  scoreDisplay:     document.getElementById('scoreDisplay'),
+  incorrectDisplay: document.getElementById('incorrectDisplay'),
   progressBar:      document.getElementById('progressBar'),
   questionTag:      document.getElementById('questionTag'),
   questionText:     document.getElementById('questionText'),
@@ -88,8 +87,9 @@ function startSession() {
   score = 0;
   correctAnswers = 0;
   feedbackShown = false;
-  el.scoreDisplay.textContent = '0';
+  el.incorrectDisplay.textContent = '0';
   el.livePercent.textContent = '—';
+  el.livePercent.style.color = '';
   el.ringFill.style.strokeDashoffset = 314;
   showScreen('quiz');
   renderQuestion();
@@ -184,16 +184,23 @@ function confirmAnswer() {
   }
 
   if (isCorrect) {
-    score += 10;
     correctAnswers++;
-    el.scoreDisplay.textContent = score;
     showFeedback(true);
   } else {
     showFeedback(false, q, q.multiple ? q.correct : [Array.isArray(q.correct) ? q.correct[0] : q.correct]);
   }
 
   const answeredSoFar = currentQuestion + 1;
-  el.livePercent.textContent = `${Math.round((correctAnswers / answeredSoFar) * 100)}%`;
+  const incorrectSoFar = answeredSoFar - correctAnswers;
+  const pctSoFar = Math.round((correctAnswers / answeredSoFar) * 100);
+
+  el.incorrectDisplay.textContent = incorrectSoFar;
+  el.livePercent.textContent = `${pctSoFar}%`;
+  el.livePercent.style.color = pctSoFar >= PASS_THRESHOLD * 100
+    ? '#2ECC71'
+    : pctSoFar >= (PASS_THRESHOLD - 0.1) * 100
+      ? '#F39C12'
+      : '#E74C3C';
 
   feedbackShown = true;
   el.nextBtn.querySelector('.btn-text').textContent =
