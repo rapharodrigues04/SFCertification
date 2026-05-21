@@ -1,8 +1,10 @@
 const CFG = window.QUIZ_CONFIG || {};
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 const PASS_THRESHOLD = CFG.passThreshold || 0.65;
+const SESSION_SIZE = CFG.sessionSize || 60;
 
 let quizData = [];
+let sessionQuestions = [];
 let currentQuestion = 0;
 let score = 0;
 let correctAnswers = 0;
@@ -68,7 +70,7 @@ fetch(CFG.dataFile || './quiz.json')
   .then(r => { if (!r.ok) throw new Error(); return r.json(); })
   .then(data => {
     quizData = data;
-    el.totalCount.textContent = data.length;
+    el.totalCount.textContent = Math.min(data.length, SESSION_SIZE);
     el.startBtn.disabled = false;
     el.startBtn.querySelector('.btn-text').textContent = 'Iniciar Quiz';
   })
@@ -78,22 +80,26 @@ fetch(CFG.dataFile || './quiz.json')
   });
 
 // ── Start ──
-el.startBtn.addEventListener('click', () => {
+function startSession() {
   shuffle(quizData);
+  sessionQuestions = quizData.slice(0, SESSION_SIZE);
   currentQuestion = 0;
   score = 0;
   correctAnswers = 0;
   feedbackShown = false;
   el.scoreDisplay.textContent = '0';
+  el.ringFill.style.strokeDashoffset = 314;
   showScreen('quiz');
   renderQuestion();
-});
+}
+
+el.startBtn.addEventListener('click', startSession);
 
 // ── Render question ──
 function renderQuestion() {
   feedbackShown = false;
-  const q = quizData[currentQuestion];
-  const total = quizData.length;
+  const q = sessionQuestions[currentQuestion];
+  const total = sessionQuestions.length;
 
   el.questionTag.textContent = `Pergunta ${currentQuestion + 1}`;
   el.questionCounter.textContent = `${currentQuestion + 1} / ${total}`;
@@ -145,7 +151,7 @@ el.nextBtn.addEventListener('click', () => {
 });
 
 function confirmAnswer() {
-  const q = quizData[currentQuestion];
+  const q = sessionQuestions[currentQuestion];
   const selectedEls = [...document.querySelectorAll('.answer.selected')];
   const selectedIndices = selectedEls.map(e => parseInt(e.dataset.index));
 
@@ -186,12 +192,12 @@ function confirmAnswer() {
 
   feedbackShown = true;
   el.nextBtn.querySelector('.btn-text').textContent =
-    currentQuestion < quizData.length - 1 ? 'Próxima' : 'Ver Resultado';
+    currentQuestion < sessionQuestions.length - 1 ? 'Próxima' : 'Ver Resultado';
 }
 
 function advance() {
   currentQuestion++;
-  if (currentQuestion < quizData.length) {
+  if (currentQuestion < sessionQuestions.length) {
     renderQuestion();
   } else {
     showResult();
@@ -236,7 +242,7 @@ el.confirmExit.addEventListener('click', () => {
 
 // ── Result ──
 function showResult() {
-  const total = quizData.length;
+  const total = sessionQuestions.length;
   const incorrect = total - correctAnswers;
   const pct = Math.round((correctAnswers / total) * 100);
   const passed = pct >= PASS_THRESHOLD * 100;
@@ -277,17 +283,7 @@ function showResult() {
 }
 
 // ── Restart / Home ──
-el.restartBtn.addEventListener('click', () => {
-  shuffle(quizData);
-  currentQuestion = 0;
-  score = 0;
-  correctAnswers = 0;
-  feedbackShown = false;
-  el.scoreDisplay.textContent = '0';
-  el.ringFill.style.strokeDashoffset = 314;
-  showScreen('quiz');
-  renderQuestion();
-});
+el.restartBtn.addEventListener('click', startSession);
 
 el.backHomeBtn.addEventListener('click', () => {
   el.ringFill.style.strokeDashoffset = 314;
