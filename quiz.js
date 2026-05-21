@@ -198,12 +198,7 @@ function confirmAnswer() {
   el.incorrectDisplay.textContent = `${100 - pctSoFar}%`;
   el.incorrectDisplay.parentElement.className = 'score-badge score-badge--fail';
   el.livePercent.textContent = `${pctSoFar}%`;
-  const state = pctSoFar >= PASS_THRESHOLD * 100
-    ? 'score-badge--pass'
-    : pctSoFar >= (PASS_THRESHOLD - 0.1) * 100
-      ? 'score-badge--warning'
-      : 'score-badge--fail';
-  el.livePercent.parentElement.className = `score-badge ${state}`;
+  el.livePercent.parentElement.className = 'score-badge score-badge--pass';
 
   feedbackShown = true;
   el.nextBtn.querySelector('.btn-text').textContent =
