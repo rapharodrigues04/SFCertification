@@ -88,6 +88,7 @@ function startSession() {
   correctAnswers = 0;
   feedbackShown = false;
   el.incorrectDisplay.textContent = '—';
+  el.incorrectDisplay.parentElement.className = 'score-badge';
   el.livePercent.textContent = '—';
   el.livePercent.parentElement.className = 'score-badge';
   el.ringFill.style.strokeDashoffset = 314;
@@ -195,6 +196,7 @@ function confirmAnswer() {
   const pctSoFar = Math.round((correctAnswers / answeredSoFar) * 100);
 
   el.incorrectDisplay.textContent = `${100 - pctSoFar}%`;
+  el.incorrectDisplay.parentElement.className = 'score-badge score-badge--fail';
   el.livePercent.textContent = `${pctSoFar}%`;
   const state = pctSoFar >= PASS_THRESHOLD * 100
     ? 'score-badge--pass'
