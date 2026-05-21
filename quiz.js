@@ -87,7 +87,7 @@ function startSession() {
   score = 0;
   correctAnswers = 0;
   feedbackShown = false;
-  el.incorrectDisplay.textContent = '0';
+  el.incorrectDisplay.textContent = '—';
   el.livePercent.textContent = '—';
   el.livePercent.style.color = '';
   el.ringFill.style.strokeDashoffset = 314;
@@ -194,7 +194,7 @@ function confirmAnswer() {
   const incorrectSoFar = answeredSoFar - correctAnswers;
   const pctSoFar = Math.round((correctAnswers / answeredSoFar) * 100);
 
-  el.incorrectDisplay.textContent = incorrectSoFar;
+  el.incorrectDisplay.textContent = `${100 - pctSoFar}%`;
   el.livePercent.textContent = `${pctSoFar}%`;
   el.livePercent.style.color = pctSoFar >= PASS_THRESHOLD * 100
     ? '#2ECC71'
