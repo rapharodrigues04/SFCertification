@@ -362,18 +362,8 @@ function advance() {
 }
 
 // ── Feedback ──
-function showFeedback(correct, q, correctIndices) {
-  el.feedbackBanner.className = `feedback-banner ${correct ? 'correct-feedback' : 'incorrect-feedback'}`;
-  el.feedbackIcon.textContent = correct ? '✓' : '✗';
-
-  if (correct) {
-    el.feedbackTitle.textContent = 'Resposta correta!';
-    el.feedbackDetail.textContent = 'Excelente! Continue assim.';
-  } else {
-    el.feedbackTitle.textContent = 'Resposta incorreta';
-    const letters = correctIndices.map(i => LETTERS[i]).join(', ');
-    el.feedbackDetail.textContent = `A resposta correta é: ${letters}`;
-  }
+function showFeedback() {
+  // feedback banner removed — correct/incorrect is shown directly on the answer options
 }
 
 function hideFeedback() {
