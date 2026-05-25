@@ -12,7 +12,8 @@
   <script>
     window.QUIZ_CONFIG = {
       dataFile: './agentforce.json',
-      passThreshold: 0.73
+      passThreshold: 0.73,
+      indexMode: true
     };
   </script>
 </head>
@@ -83,6 +84,18 @@
 
       <div class="progress-track">
         <div id="progressBar" class="progress-fill"></div>
+      </div>
+
+      <!-- Question Index Panel -->
+      <div id="questionIndexPanel" class="question-index-panel">
+        <button id="toggleIndexBtn" class="index-toggle-btn">
+          <span class="index-title">Índice de Perguntas</span>
+          <span id="indexProgressText" class="index-progress-text">0/0 respondidas</span>
+          <svg class="index-toggle-icon" viewBox="0 0 24 24" fill="none" width="18" height="18">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div id="indexGrid" class="index-grid"></div>
       </div>
 
       <main class="quiz-body">
