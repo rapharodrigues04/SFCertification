@@ -3,6 +3,8 @@ const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 const PASS_THRESHOLD = CFG.passThreshold || 0.65;
 const SESSION_SIZE = CFG.sessionSize || 60;
 const INDEX_MODE = CFG.indexMode || false;
+const SIMULADO_MODE = CFG.simuladoMode || false;
+const SIMULADO_SIZE = CFG.simuladoSize || SESSION_SIZE;
 
 let quizData = [];
 let sessionQuestions = [];
@@ -10,6 +12,7 @@ let currentQuestion = 0;
 let correctAnswers = 0;
 let feedbackShown = false;
 let questionStates = [];
+let currentSimulado = null;
 
 // ── DOM refs ──
 const screens = {
@@ -99,19 +102,61 @@ fetch(CFG.dataFile || './quiz.json')
   .then(r => { if (!r.ok) throw new Error(); return r.json(); })
   .then(data => {
     quizData = data;
-    el.totalCount.textContent = Math.min(data.length, SESSION_SIZE);
-    el.startBtn.disabled = false;
-    el.startBtn.querySelector('.btn-text').textContent = 'Iniciar Quiz';
+
+    if (SIMULADO_MODE) {
+      el.totalCount.textContent = data.length;
+      buildSimuladoGrid(data.length);
+    } else {
+      el.totalCount.textContent = Math.min(data.length, SESSION_SIZE);
+      el.startBtn.style.display = '';
+      el.startBtn.disabled = false;
+      el.startBtn.querySelector('.btn-text').textContent = 'Iniciar Quiz';
+    }
   })
   .catch(() => {
-    el.startBtn.querySelector('.btn-text').textContent = 'Erro ao carregar';
     el.totalCount.textContent = '—';
+    if (!SIMULADO_MODE) {
+      el.startBtn.style.display = '';
+      el.startBtn.querySelector('.btn-text').textContent = 'Erro ao carregar';
+    }
   });
 
+function buildSimuladoGrid(total) {
+  const container = document.getElementById('simuladoContainer');
+  if (!container) return;
+  const numSimulados = Math.max(1, Math.floor(total / SIMULADO_SIZE));
+  container.innerHTML = '';
+  for (let i = 0; i < numSimulados; i++) {
+    const start = i * SIMULADO_SIZE + 1;
+    const end = (i === numSimulados - 1) ? total : (i + 1) * SIMULADO_SIZE;
+    const count = end - start + 1;
+    const btn = document.createElement('button');
+    btn.className = 'simulado-btn';
+    btn.innerHTML = `
+      <span class="simulado-num">Simulado ${i + 1}</span>
+      <span class="simulado-range">Questões ${start}–${end}</span>
+      <span class="simulado-count">${count} perguntas</span>
+    `;
+    btn.addEventListener('click', () => startSession(i));
+    container.appendChild(btn);
+  }
+}
+
 // ── Start ──
-function startSession() {
-  shuffle(quizData);
-  sessionQuestions = quizData.slice(0, SESSION_SIZE);
+function startSession(simuladoIndex) {
+  if (SIMULADO_MODE && simuladoIndex !== undefined) {
+    currentSimulado = simuladoIndex;
+    const total = quizData.length;
+    const numSimulados = Math.max(1, Math.floor(total / SIMULADO_SIZE));
+    const start = simuladoIndex * SIMULADO_SIZE;
+    const end = (simuladoIndex === numSimulados - 1) ? total : (simuladoIndex + 1) * SIMULADO_SIZE;
+    sessionQuestions = quizData.slice(start, end);
+  } else {
+    currentSimulado = null;
+    shuffle(quizData);
+    sessionQuestions = quizData.slice(0, SESSION_SIZE);
+  }
+
   currentQuestion = 0;
   correctAnswers = 0;
   feedbackShown = false;
@@ -133,7 +178,7 @@ function startSession() {
   renderQuestion();
 }
 
-el.startBtn.addEventListener('click', startSession);
+el.startBtn.addEventListener('click', () => startSession());
 
 // ── Render question ──
 function renderQuestion() {
@@ -142,7 +187,9 @@ function renderQuestion() {
   const total = sessionQuestions.length;
   const state = INDEX_MODE ? questionStates[currentQuestion] : null;
 
-  el.questionTag.textContent = `Pergunta ${currentQuestion + 1}`;
+  el.questionTag.textContent = SIMULADO_MODE && currentSimulado !== null
+    ? `Simulado ${currentSimulado + 1} · Pergunta ${currentQuestion + 1}`
+    : `Pergunta ${currentQuestion + 1}`;
   el.questionCounter.textContent = `${currentQuestion + 1} / ${total}`;
 
   if (INDEX_MODE) {
@@ -397,7 +444,7 @@ function showResult() {
 }
 
 // ── Restart / Home ──
-el.restartBtn.addEventListener('click', startSession);
+el.restartBtn.addEventListener('click', () => startSession(currentSimulado !== null ? currentSimulado : undefined));
 
 el.backHomeBtn.addEventListener('click', () => {
   el.ringFill.style.strokeDashoffset = 314;

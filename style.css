@@ -992,6 +992,55 @@ body::before {
   line-height: 1;
 }
 
+/* ══════════════════════════════
+   SIMULADO GRID (Start Screen)
+══════════════════════════════ */
+.simulado-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.simulado-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 14px 16px;
+  background: var(--surface-2);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  transition: all var(--transition);
+}
+.simulado-btn:hover {
+  border-color: var(--brand);
+  background: rgba(0,161,224,0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,161,224,0.15);
+}
+
+.simulado-num {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.simulado-range {
+  font-size: 12px;
+  color: var(--brand);
+  font-weight: 600;
+}
+
+.simulado-count {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
 /* ── Responsive ── */
 @media (max-width: 600px) {
   .start-card, .result-card { padding: 32px 24px; }
@@ -1005,5 +1054,6 @@ body::before {
   .stat-divider { width: 80%; height: 1px; }
   .hub-title { font-size: 28px; }
   .cert-grid { grid-template-columns: 1fr; }
-  .question-index-panel { order: 10; margin-top: 0; border-top: none; border-top: 1px solid var(--border); padding-top: 0; }
+  .question-index-panel { order: 10; border-top: 1px solid var(--border); padding-top: 0; }
+  .simulado-grid { grid-template-columns: 1fr; }
 }
