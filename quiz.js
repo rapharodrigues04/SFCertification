@@ -2,12 +2,14 @@ const CFG = window.QUIZ_CONFIG || {};
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 const PASS_THRESHOLD = CFG.passThreshold || 0.65;
 const SESSION_SIZE = CFG.sessionSize || 60;
+const INDEX_MODE = CFG.indexMode || false;
 
 let quizData = [];
 let sessionQuestions = [];
 let currentQuestion = 0;
 let correctAnswers = 0;
 let feedbackShown = false;
+let questionStates = [];
 
 // ── DOM refs ──
 const screens = {
@@ -65,6 +67,33 @@ function showScreen(name) {
   });
 }
 
+// ── Index Panel ──
+function renderIndex() {
+  const grid = document.getElementById('indexGrid');
+  const progressText = document.getElementById('indexProgressText');
+  if (!grid) return;
+
+  const total = sessionQuestions.length;
+  const answered = questionStates.filter(s => s.answered).length;
+  if (progressText) progressText.textContent = `${answered}/${total} respondidas`;
+
+  grid.innerHTML = '';
+  sessionQuestions.forEach((_, idx) => {
+    const btn = document.createElement('button');
+    btn.className = 'index-btn';
+    btn.textContent = idx + 1;
+    if (idx === currentQuestion) btn.classList.add('index-btn--current');
+    if (questionStates[idx] && questionStates[idx].answered) btn.classList.add('index-btn--answered');
+    btn.addEventListener('click', () => navigateTo(idx));
+    grid.appendChild(btn);
+  });
+}
+
+function navigateTo(idx) {
+  currentQuestion = idx;
+  renderQuestion();
+}
+
 // ── Load ──
 fetch(CFG.dataFile || './quiz.json')
   .then(r => { if (!r.ok) throw new Error(); return r.json(); })
@@ -84,7 +113,6 @@ function startSession() {
   shuffle(quizData);
   sessionQuestions = quizData.slice(0, SESSION_SIZE);
   currentQuestion = 0;
-  score = 0;
   correctAnswers = 0;
   feedbackShown = false;
   el.incorrectDisplay.textContent = '—';
@@ -92,6 +120,15 @@ function startSession() {
   el.livePercent.textContent = '—';
   el.livePercent.parentElement.className = 'score-badge';
   el.ringFill.style.strokeDashoffset = 314;
+
+  if (INDEX_MODE) {
+    questionStates = sessionQuestions.map(() => ({ answered: false, selectedIndices: [], isCorrect: false }));
+    const grid = document.getElementById('indexGrid');
+    if (grid) grid.classList.add('open');
+    const icon = document.querySelector('.index-toggle-icon');
+    if (icon) icon.classList.add('rotated');
+  }
+
   showScreen('quiz');
   renderQuestion();
 }
@@ -103,10 +140,17 @@ function renderQuestion() {
   feedbackShown = false;
   const q = sessionQuestions[currentQuestion];
   const total = sessionQuestions.length;
+  const state = INDEX_MODE ? questionStates[currentQuestion] : null;
 
   el.questionTag.textContent = `Pergunta ${currentQuestion + 1}`;
   el.questionCounter.textContent = `${currentQuestion + 1} / ${total}`;
-  el.progressBar.style.width = `${((currentQuestion) / total) * 100}%`;
+
+  if (INDEX_MODE) {
+    const answeredCount = questionStates.filter(s => s.answered).length;
+    el.progressBar.style.width = `${(answeredCount / total) * 100}%`;
+  } else {
+    el.progressBar.style.width = `${((currentQuestion) / total) * 100}%`;
+  }
 
   el.questionText.textContent = q.question;
   el.multipleHint.classList.toggle('hidden', !q.multiple);
@@ -125,9 +169,30 @@ function renderQuestion() {
     el.answersContainer.appendChild(div);
   });
 
-  hideFeedback();
-  el.nextBtn.style.display = 'none';
-  el.nextBtn.querySelector('.btn-text').textContent = 'Confirmar';
+  if (state && state.answered) {
+    feedbackShown = true;
+    const correctIndices = Array.isArray(q.correct) ? q.correct : [q.correct];
+
+    document.querySelectorAll('.answer').forEach(a => {
+      const idx = parseInt(a.dataset.index);
+      if (state.selectedIndices.includes(idx)) a.classList.add('selected');
+      if (correctIndices.includes(idx)) a.classList.add('correct');
+      if (state.selectedIndices.includes(idx) && !correctIndices.includes(idx)) a.classList.add('incorrect');
+      a.classList.add('disabled');
+    });
+
+    showFeedback(state.isCorrect, q, correctIndices);
+
+    const allDone = questionStates.every(s => s.answered);
+    el.nextBtn.style.display = 'inline-flex';
+    el.nextBtn.querySelector('.btn-text').textContent = allDone ? 'Ver Resultado' : 'Próxima';
+  } else {
+    hideFeedback();
+    el.nextBtn.style.display = 'none';
+    el.nextBtn.querySelector('.btn-text').textContent = 'Confirmar';
+  }
+
+  if (INDEX_MODE) renderIndex();
 }
 
 function selectAnswer(div, q) {
@@ -185,27 +250,61 @@ function confirmAnswer() {
   }
 
   if (isCorrect) {
-    correctAnswers++;
+    if (!INDEX_MODE) correctAnswers++;
     showFeedback(true);
   } else {
     showFeedback(false, q, q.multiple ? q.correct : [Array.isArray(q.correct) ? q.correct[0] : q.correct]);
   }
 
-  const answeredSoFar = currentQuestion + 1;
-  const incorrectSoFar = answeredSoFar - correctAnswers;
-  const pctSoFar = Math.round((correctAnswers / answeredSoFar) * 100);
-
-  el.incorrectDisplay.textContent = `${100 - pctSoFar}%`;
-  el.incorrectDisplay.parentElement.className = 'score-badge score-badge--fail';
-  el.livePercent.textContent = `${pctSoFar}%`;
-  el.livePercent.parentElement.className = 'score-badge score-badge--pass';
+  if (INDEX_MODE) {
+    questionStates[currentQuestion] = { answered: true, selectedIndices: [...selectedIndices], isCorrect };
+    correctAnswers = questionStates.filter(s => s.isCorrect).length;
+    const answeredCount = questionStates.filter(s => s.answered).length;
+    const pctSoFar = Math.round((correctAnswers / answeredCount) * 100);
+    el.incorrectDisplay.textContent = `${100 - pctSoFar}%`;
+    el.incorrectDisplay.parentElement.className = 'score-badge score-badge--fail';
+    el.livePercent.textContent = `${pctSoFar}%`;
+    el.livePercent.parentElement.className = 'score-badge score-badge--pass';
+    el.progressBar.style.width = `${(answeredCount / sessionQuestions.length) * 100}%`;
+    renderIndex();
+    const allDone = answeredCount === sessionQuestions.length;
+    el.nextBtn.querySelector('.btn-text').textContent = allDone ? 'Ver Resultado' : 'Próxima';
+  } else {
+    const answeredSoFar = currentQuestion + 1;
+    const pctSoFar = Math.round((correctAnswers / answeredSoFar) * 100);
+    el.incorrectDisplay.textContent = `${100 - pctSoFar}%`;
+    el.incorrectDisplay.parentElement.className = 'score-badge score-badge--fail';
+    el.livePercent.textContent = `${pctSoFar}%`;
+    el.livePercent.parentElement.className = 'score-badge score-badge--pass';
+    el.nextBtn.querySelector('.btn-text').textContent =
+      currentQuestion < sessionQuestions.length - 1 ? 'Próxima' : 'Ver Resultado';
+  }
 
   feedbackShown = true;
-  el.nextBtn.querySelector('.btn-text').textContent =
-    currentQuestion < sessionQuestions.length - 1 ? 'Próxima' : 'Ver Resultado';
 }
 
 function advance() {
+  if (INDEX_MODE) {
+    const total = sessionQuestions.length;
+    let nextIdx = -1;
+
+    for (let i = currentQuestion + 1; i < total; i++) {
+      if (!questionStates[i].answered) { nextIdx = i; break; }
+    }
+    if (nextIdx === -1) {
+      for (let i = 0; i < currentQuestion; i++) {
+        if (!questionStates[i].answered) { nextIdx = i; break; }
+      }
+    }
+
+    if (nextIdx === -1) {
+      showResult();
+    } else {
+      navigateTo(nextIdx);
+    }
+    return;
+  }
+
   currentQuestion++;
   if (currentQuestion < sessionQuestions.length) {
     renderQuestion();
@@ -253,6 +352,11 @@ el.confirmExit.addEventListener('click', () => {
 // ── Result ──
 function showResult() {
   const total = sessionQuestions.length;
+
+  if (INDEX_MODE) {
+    correctAnswers = questionStates.filter(s => s.isCorrect).length;
+  }
+
   const incorrect = total - correctAnswers;
   const pct = Math.round((correctAnswers / total) * 100);
   const passed = pct >= PASS_THRESHOLD * 100;
@@ -299,3 +403,17 @@ el.backHomeBtn.addEventListener('click', () => {
   el.ringFill.style.strokeDashoffset = 314;
   showScreen('start');
 });
+
+// ── Index toggle ──
+if (INDEX_MODE) {
+  const toggleBtn = document.getElementById('toggleIndexBtn');
+  const indexGrid = document.getElementById('indexGrid');
+  const toggleIcon = document.querySelector('.index-toggle-icon');
+
+  if (toggleBtn && indexGrid) {
+    toggleBtn.addEventListener('click', () => {
+      indexGrid.classList.toggle('open');
+      if (toggleIcon) toggleIcon.classList.toggle('rotated');
+    });
+  }
+}
