@@ -13,7 +13,9 @@
     window.QUIZ_CONFIG = {
       dataFile: './agentforce.json',
       passThreshold: 0.73,
-      indexMode: true
+      indexMode: true,
+      simuladoMode: true,
+      simuladoSize: 60
     };
   </script>
 </head>
@@ -39,7 +41,7 @@
       <div class="start-stats">
         <div class="stat-item">
           <span class="stat-number" id="totalQuestionsCount">—</span>
-          <span class="stat-label">Perguntas</span>
+          <span class="stat-label">No Banco</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
@@ -52,11 +54,12 @@
           <span class="stat-label">Tentativas</span>
         </div>
       </div>
-      <button id="startBtn" class="btn-primary" disabled>
+      <div id="simuladoContainer" class="simulado-grid"></div>
+      <button id="startBtn" class="btn-primary" disabled style="display:none;">
         <span class="btn-text">Carregando...</span>
         <svg class="btn-icon" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <p class="start-hint">As perguntas são embaralhadas a cada tentativa</p>
+      <p class="start-hint">Escolha um simulado para começar</p>
     </div>
   </div>
 

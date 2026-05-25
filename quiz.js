@@ -126,7 +126,7 @@ fetch(CFG.dataFile || './quiz.json')
 function buildSimuladoGrid(total) {
   const container = document.getElementById('simuladoContainer');
   if (!container) return;
-  const numSimulados = Math.max(1, Math.floor(total / SIMULADO_SIZE));
+  const numSimulados = Math.max(1, Math.round(total / SIMULADO_SIZE));
   container.innerHTML = '';
   for (let i = 0; i < numSimulados; i++) {
     const start = i * SIMULADO_SIZE + 1;
@@ -148,7 +148,7 @@ function startSession(simuladoIndex) {
   if (SIMULADO_MODE && simuladoIndex !== undefined) {
     currentSimulado = simuladoIndex;
     const total = quizData.length;
-    const numSimulados = Math.max(1, Math.floor(total / SIMULADO_SIZE));
+    const numSimulados = Math.max(1, Math.round(total / SIMULADO_SIZE));
     const start = simuladoIndex * SIMULADO_SIZE;
     const end = (simuladoIndex === numSimulados - 1) ? total : (simuladoIndex + 1) * SIMULADO_SIZE;
     sessionQuestions = quizData.slice(start, end);
