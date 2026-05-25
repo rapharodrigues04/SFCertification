@@ -992,6 +992,22 @@ body::before {
   line-height: 1;
 }
 
+.index-btn--wrong {
+  border-color: var(--danger);
+  background: rgba(231,76,60,0.18);
+  color: var(--danger);
+  font-weight: 700;
+}
+.index-btn--wrong::after {
+  content: '✗';
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  font-size: 7px;
+  font-weight: 700;
+  line-height: 1;
+}
+
 /* ══════════════════════════════
    SIMULADO GRID (Start Screen)
 ══════════════════════════════ */

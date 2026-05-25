@@ -86,7 +86,9 @@ function renderIndex() {
     btn.className = 'index-btn';
     btn.textContent = idx + 1;
     if (idx === currentQuestion) btn.classList.add('index-btn--current');
-    if (questionStates[idx] && questionStates[idx].answered) btn.classList.add('index-btn--answered');
+    if (questionStates[idx] && questionStates[idx].answered) {
+      btn.classList.add(questionStates[idx].isCorrect ? 'index-btn--answered' : 'index-btn--wrong');
+    }
     btn.addEventListener('click', () => navigateTo(idx));
     grid.appendChild(btn);
   });
