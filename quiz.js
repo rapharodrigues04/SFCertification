@@ -134,7 +134,6 @@ function buildSimuladoGrid(total) {
     btn.className = 'simulado-btn';
     btn.innerHTML = `
       <span class="simulado-num">Simulado ${i + 1}</span>
-      <span class="simulado-range">Questões ${start}–${end}</span>
       <span class="simulado-count">${count} perguntas</span>
     `;
     btn.addEventListener('click', () => startSession(i));
