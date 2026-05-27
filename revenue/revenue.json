@@ -1,0 +1,1652 @@
+[
+  {
+    "question": "A Revenue Cloud Consultant needs to display a list of products to be shown in the browse phase of a guided selling journey. Which Product Catalog Management business API should the consultant use to retrieve a list of products that belong to a specific catalog?",
+    "options": [
+      "A. Products List (GET)",
+      "B. Product Related Records List (POST)",
+      "C. Products List (POST)"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A solution is being designed for migrating a customer's install base to Revenue Cloud. The customer states that it is extremely critical for the installed base to work fine in Revenue Cloud so that there is no business disruption, as a large part of their business is Amendments and Renewals. Apart from the Product, Product Selling Model, and Pricebook, which other key objects should be included in the discovery to help design this migration?",
+    "options": [
+      "A. Asset, Asset Action, Asset State Period, Asset Action Source",
+      "B. Asset, Subscription, Subscribed Asset, Order",
+      "C. Quote, Quote Line, Order, Order Product"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers is expanding into French- and German-speaking regions. The team wants to ensure that product names and descriptions appear in the correct language when customers browse the catalog via APIs. Which configuration is required to support this multilingual API response?",
+    "options": [
+      "A. Use data translation via Translation Workbench to modify the metadata API and Product List API",
+      "B. Provide data translations using standard Salesforce Product2 APIs and Product Details API",
+      "C. Enable data translation and provide values via the Product List API and Product Details API"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "What should a consultant use to create Renewal Opportunities and Quotes/Orders out of the box?",
+    "options": [
+      "A. Revenue Cloud Subscription Settings",
+      "B. Renewal Flow Templates",
+      "C. Managed Apex classes"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A sales user is trying to add products to a Quote using Product Discovery via Browse Catalog in Revenue Cloud. However, they are unable to see the products they are looking to add. What is the reason for this issue?",
+    "options": [
+      "A. The products are not associated with an active price book entry that belongs to the price book selected on the Quote",
+      "B. The sales user profile does not have the \"View All\" on Product2 object permission, allowing users to have access to all the Products",
+      "C. The Product Discovery component on the Quote Layout is misconfigured or hidden and unable to be accessed on Lightning page"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "In the new fiscal year, the pricing team has released updated prices for all of its products. A sales rep had an agreement with one of their customers stating that as soon as new prices are released, the original prices would need to be refreshed, as they had been given a heavy discount on their original deal. The sales rep will need to ensure that there is no service disruption to the customer during the price updating process. How should the sales rep configure the deal to pull the updated prices for this customer's assets?",
+    "options": [
+      "A. Amend the original asset, negate the original quantity, re-add the product with the same quantity, and go through the Quote to Order process.",
+      "B. Amend the original asset, leave the original quantity, reprice the quote, and go through the Quote to Order process.",
+      "C. Change the end date of the Asset, re-add the product with the same quantity, and go through the Quote to Order process."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A product manager is creating a bundle in Product Catalog Management and would like to limit the component quantity to three on specific components. How should the product manager achieve this outcome?",
+    "options": [
+      "A. Set the maximum number of components on the Group Cardinality to three.",
+      "B. Set the maximum quantity to three on the Product Record of each of the desired components.",
+      "C. Set the maximum quantity field on the Local Cardinality of the desired component product to three."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A pricing administrator needs to set up pricing so that a calculated discount is spread evenly across all line items in a quote or order. How should the pricing administrator set up the pricing correctly?",
+    "options": [
+      "A. Add and configure the Formula Based Pricing element with a formula to add an ItemTotalPrice context tag.",
+      "B. Add and configure the Aggregate Price element with a SUM function to add discounts for all lines.",
+      "C. Add and configure the Discount Distribution Service element as the last step of pricing procedure."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant needs to run a report on the attribute runtime values when an order is activated and asset records are created. On which objects should the consultant base the report?",
+    "options": [
+      "A. Asset State Periods and Asset State Period Attributes",
+      "B. Asset State Periods and Order Product Attribute",
+      "C. Asset Action Source and Product Attribute Definition"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A company's IT team is planning to implement Revenue Cloud. Their team consists of business analysts and administrators. The company plans to solve a complex and major use case of omni-channel selling, allowing its customers to buy directly from its third-party website as well as via its sales reps. The company also plans to hire new staff to support this project. Which skill set does the IT team need to successfully implement this project?",
+    "options": [
+      "A. Expertise in Salesforce Integration, including REST APIs",
+      "B. Expertise in Salesforce flows",
+      "C. Expertise in Apex and Lightning Web Component development"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A global manufacturing company is implementing Revenue Cloud alongside Sales Cloud and Service Cloud. The company's product catalog spans multiple business units and markets. The catalog must support reusable attributes, configurable product bundles, and governance controls to prevent inconsistent updates. Stakeholders from product, sales, and IT are involved, but responsibilities need to be clearly defined to avoid bottlenecks and maintain catalog scalability. Which role assignments support long-term product catalog governance?",
+    "options": [
+      "A. Product Managers own all catalog activities end-to-end since they manage product decisions.",
+      "B. Catalog Administrator manages classifications and attributes. Product Designer defines product structures and bundles.",
+      "C. Sales Operations manages attributes and classifications. Salesforce Administrator defines product bundles and hierarchy."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant is helping a customer service operations manager determine which product lines have the most order fallout. Which steps should the consultant follow to enable the relevant dashboards?",
+    "options": [
+      "A. Within Revenue Settings, enable Revenue Management Intelligence and Install the Dynamic Revenue Orchestrator Analytics App.",
+      "B. Within Revenue Management Intelligence Setup, complete Data Cloud Configurations and install the Dynamic Revenue Orchestrator Analytics App.",
+      "C. Within Tableau Unified Analytics, create a recipe based on the Fulfillment Fallout Rule object and design a dashboard with product line filter."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A large enterprise customer, Universal Containers (UC), has negotiated a special, long-term agreement with a software vendor for its enterprise-wide licensing. This agreement includes custom pricing tiers, specific discounts that apply only to UC across various product families, and unique billing frequencies tied to UC's fiscal year. The sales team needs to ensure that all future quotes and orders for UC automatically reflect these pre-negotiated terms. How should the sales team consistently apply these specific pricing and billing conditions for UC?",
+    "options": [
+      "A. Use Discount Schedules on relevant products, with a Price Rule that applies these custom schedules only when UC is the designated account.",
+      "B. Establish a dedicated price book for UC that is populated with UC's negotiated prices, and includes all custom rates and specific billing rules for its products.",
+      "C. Create a Contracted Pricing record on the contract associated with the UC Account that details product-specific prices, tiered discounts, and special billing arrangements.",
+      "C. These contract-based pricing terms become \"the negotiated contract prices for the customer\" that Revenue Cloud applies to future transactions. When sales reps create future quotes or orders for UC, they can initiate them from the existing active contract using the \"Start a New Quote or Order From a Contract\" functionality. Revenue Cloud automatically applies the contract's negotiated prices and billing frequencies to all line items. Additionally, when amending or renewing UC's assets, the system maintains these contract-based pricing terms, ensuring consistency across the entire customer lifecycle. This approach supports UC's unique requirements: custom pricing tiers are defined in tiered volume adjustments on Contract Item Prices; specific discounts are captured in Price Adjustment Schedules; and billing frequencies tied to UC's fiscal year are configured at the contract level. All future transactions for UC automatically inherit these terms. Option A (Discount Schedules with Price Rules) applies broadly to any account and doesn't support customer-specific governance. Option B (Dedicated Price Book) lacks the flexibility for tiered billing and special terms. Contract Pricing is specifically designed for long-term, negotiated, customer-specific commercial agreements. Reference: Salesforce Help - Contract Pricing in Revenue Cloud, Manage Contract Pricing, Apply Contract Pricing When You Amend or Renew Assets"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A furniture company is selling unassembled furniture with user manuals. The company does not want to show user manuals as a quote line when selling to customers, but it needs to make sure user manuals are included when shipping the unassembled furniture. What is the recommended approach?",
+    "options": [
+      "A. Add the user manuals as quote line, but hide them in the Transaction Line Table and proposal document.",
+      "B. Add the user manuals as an attribute with a value of Included or Excluded under the unassembled furniture product record.",
+      "C. Add the user manuals as a technical product and create associated decomposition rule(s)."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A subscription product that starts on July 1 is assigned a Billing Treatment at the Product Level that bills in arrears. However, the Billing Treatment assigned at the Order Product level is configured to bill in advance. What is the correct statement regarding Billing Treatment?",
+    "options": [
+      "A. Billing Treatment resolution always prefers the Product Level over the Order Product level.",
+      "B. Billing Treatment at the Order Product level overrides the Product Level Billing Treatment.",
+      "C. Billing Treatments are only evaluated when no Legal Entity is defined."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant is setting up the amendment process for assets in Revenue Cloud. The goal is to ensure that when a customer wants to change their subscription, the process is streamlined from initiation to the final update of the asset. In this automated lifecycle, what is true about the Opportunity?",
+    "options": [
+      "A. It is an optional record used for forecasting purposes and does not directly participate in the asset update automation.",
+      "B. It directly updates the Asset record as soon as the opportunity stage is changed to Closed Won, bypassing the need for a quote.",
+      "C. It is only required for amendments that involve a price increase; for other amendments, a quote can be created directly from the account."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A Cloud Consultant is using Contracts AI to retrieve clauses and contract fields from a PDF. After the initial run, the consultant realizes that a payment method custom field needs to be retrieved that was not initially included. What should the consultant do to retrieve this custom field?",
+    "options": [
+      "A. Modify the contract extraction template to define the attribute mapping and context mapping for payment method.",
+      "B. Modify the AI prompt template to define the attribute mapping and context mapping for payment method.",
+      "C. Log a support case with Salesforce to enable payment method to be added to the extraction mapping used."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers (UC) sells complex Enterprise Connectivity Suites made up of physical hardware, cloud software, and services. Each component demands a unique fulfillment process, but UC’s current system’s uniform order treatment leads to delays and errors in tailored delivery. UC needs to break down these complex orders, apply custom fulfillment plans for each distinct product, and ensure a tailored delivery experience. Which Revenue Cloud capability should solve UC’s problems with accurate order fulfillment?",
+    "options": [
+      "A. Dynamic Revenue Orchestrator (DRO)",
+      "B. Salesforce Experience Cloud for customer portals",
+      "C. Product Configurator"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A company creates large quotes with hundreds of line items. These line items must be generated in a specific format for internal processing and presentation to the customer. What should the sales reps use to generate these line items in the required format?",
+    "options": [
+      "A. Document Builder",
+      "B. Custom Report",
+      "C. Omni Studio Document Generation"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A medical device company manages its product information across multiple disconnected systems. Product specifications are stored in a dedicated Product Information Management (PIM) system, pricing is maintained in complex spreadsheets managed by the finance team, and sellable part numbers (SKUs) are mastered in the company’s Enterprise Resource Planning (ERP) system. How should a solution architect use Revenue Cloud to solve the company’s data synchronization problems and streamline the process from quote to ERP fulfillment?",
+    "options": [
+      "A. By establishing the Salesforce Product Catalog as the single source of truth for all commercial products, pricing, and bundle configurations, and ensuring that downstream ERP systems consume this data for order fulfillment",
+      "B. By creating custom objects in Salesforce to replicate the data structure of the PIM and ERP systems, and writing custom Apex triggers to keep the three systems aligned",
+      "C. By using an integration platform to sync data from the PIM, the pricing spreadsheets, and the ERP into Salesforce nightly, overwriting the Salesforce catalog each time"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A smartphone product is currently sold as a one-time upfront payment. In order for it to be sold with equal monthly installment payments for 12 months, what should the consultant set up?",
+    "options": [
+      "A. Assign a product selling model option of Term Annual to the product.",
+      "B. Assign a product selling model option of Term Monthly to the product.",
+      "C. Assign a product selling model option of Evergreen Monthly to the product."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant needs to verify that the calculated prices on a quote match the pricing logic defined in the pricing procedure. The consultant has already reviewed the procedure steps and quote lines but suspects that a custom pricing script may be affecting the results. What should the consultant do to trace the sequence of pricing actions and adjustments applied during quote calculation?",
+    "options": [
+      "A. Check the Pricing Operations Console.",
+      "B. Check the Revenue Transaction Logs.",
+      "C. Check the Pricing Debug Mode Output."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A Billing Operations user at Universal Containers needs the system to automatically generate invoices every Monday at 6:00 AM for all completed billing schedules from the past week. How should the user configure this automation in Billing?",
+    "options": [
+      "A. Define a Billing Treatment that references an Invoice Generation Time field at the product level.",
+      "B. Schedule a Recurring Invoice Run with a Weekly frequency and 6:00 AM start time.",
+      "C. Create a custom flow that runs nightly and generates invoices using the Invoice Preview feature."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A hardware company sells bundles that consist of commercial products. All products are required to be shipped, and they have a corresponding technical product called 'Shipping Service'. For some of the company's customers, multiple instances of fulfillment products are generated. The fulfillment designer does not want to ship each of those commercial products separately. What should the Decomposition Scope be for all these products to allow all products to ship together?",
+    "options": [
+      "A. Account",
+      "B. Order",
+      "C. Bundle"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A new product administrator has been tasked with managing the product catalog for their company. They can view product records in the catalog but can't make any edits. What should a consultant do to fix this issue?",
+    "options": [
+      "A. Add the administrator to the Product Management Queue.",
+      "B. Grant the Modify All Data permission on the Product object for the administrator.",
+      "C. Assign the Product Catalog Management Designer permission set license to the administrator."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A large enterprise company offers flexible options for customers to lease or buy products. Before implementing Revenue Cloud, the company had a large product catalog to ensure that each product could be associated with the correct price to support both lease and buy use cases. Which Revenue Cloud feature should help the company rationalize its product catalog?",
+    "options": [
+      "A. Product selling model and product selling model option",
+      "B. Commercial products and Technical products",
+      "C. Multiple price books and associated price book entries"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A telecommunications customer currently subscribes to the Standard Data Plan (US$50/month). On October 15, halfway through their monthly billing cycle, they decide to upgrade to the Unlimited Data Plan ($100/month). The company's policy is to immediately apply the new plan's benefits and proportionally adjust the current month's billing. An administrator needs to accurately calculate the credit for the unused portion of the Standard Data Plan and then charge for the used portion of the Unlimited Data Plan in October. Which pricing element should the administrator use?",
+    "options": [
+      "A. The Derived Price element",
+      "B. The Aggregate Price element",
+      "C. The Provision element"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A sales rep notices that while creating a quote, the Browse Products button isn't visible on the Quote Page Layout. What is the cause of the problem?",
+    "options": [
+      "A. The Revenue Cloud Consultant did not assign the Product Configurator permission set to the sales rep.",
+      "B. The Revenue Cloud Consultant did not assign the Product Configuration Rules Designer permission set to the sales rep.",
+      "C. The Revenue Cloud Consultant did not assign the Product Discovery User permissions to the sales rep."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant recently implemented Revenue Cloud for a customer and wants to ensure successful adoption and maintenance. Which steps should the consultant take with the customer after go-live?",
+    "options": [
+      "A. Have knowledge transfer sessions on the implementation and provide help documentation/recordings.",
+      "B. Take customer inquiries and keep in touch with them through Slack post-project.",
+      "C. Have the customer get certified in Revenue Cloud and write their own documentation."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A company is offering a subscription service with a standard monthly price of US$200. The proration settings are as follows: Proration Period: Monthly Period Boundary: Align to Calendar Partial Periods Allowed: Yes A customer begins their subscription on March 20, 2021, and ends it on December 31, 2021. For the initial partial period (March 20–31), which formula should the consultant use to calculate the proration multiplier?",
+    "options": [
+      "A. Proration Multiplier = Number of remaining days in March / Total number of days in March",
+      "B. Proration Multiplier = Number of days used in March / Total number of days in March",
+      "C. Proration Multiplier = Number of days used in a year / Total number of days in a year"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A sales rep needs to renew multiple assets. Some assets will be renewed at the same prices, so negotiations are unnecessary and the rep can directly create a renewal order. Some assets need to be renewed at higher prices, so the rep needs to create a quote for negotiation. When the sales rep starts the renewal process, they are not able to choose whether to create a quote or an order. How should a Revenue Cloud Consultant address the sales rep's issue?",
+    "options": [
+      "A. Customize the Manage Asset component to allow renewal quote and order creation.",
+      "B. Override the standard Salesforce flow to allow renewal quote and order creation.",
+      "C. Change the Revenue Cloud settings to allow renewal quote and order creation."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A product designer created the necessary products and bundles using Product Catalog Management. However, users are not able to see the products while preparing quotes. Which action should the product designer take to resolve this?",
+    "options": [
+      "A. Select the appropriate product selling model for each of the products.",
+      "B. Select the appropriate pricing procedure in the Salesforce Pricing Setup.",
+      "C. Select the appropriate context definition in the Product Discovery Settings."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A law firm is using Revenue Cloud’s Contract Lifecycle Management (CLM) capability. The law firm creates very large Merger & Acquisitions (M&A) contracts for its commercial customers. The contract designer sets a requirement to structure and organize the content more effectively. This will help the contract designer quickly navigate the document and include the appropriate clauses, tables, and contract text in the document. How should a template designer meet this requirement?",
+    "options": [
+      "A. Create a structure in a document template.",
+      "B. Create child templates under the main document template.",
+      "C. Create a section in a document template."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A customer sells 10,000 different products in 38 countries. They plan to launch a new product which will be sold globally, as well. However, due to security restrictions, the new product cannot be sold in two specific countries. What should the product designer do to accommodate this restriction by creating a minimal number of records for the rules?",
+    "options": [
+      "A. Control availability with a recommendation rule.",
+      "B. Control availability with a qualification rule.",
+      "C. Control availability with a disqualification rule."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant is asked to provide a report on ordered internet service where upload/download speed is configurable and is required. Which objects should the consultant use in a custom report to retrieve this information?",
+    "options": [
+      "A. Order Products, Order Product Attributes",
+      "B. Order Product Attributes, Product Attribute Definition",
+      "C. Order Products, Product Attribute Definition"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A customer wants to define default entitlement for data storage that they want to sell. What should they use to accomplish this?",
+    "options": [
+      "A. Product Usage Grant",
+      "B. Product Usage Resource",
+      "C. Rate Card Entries"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A company is implementing Revenue Cloud to automate its subscription renewals. A Revenue Cloud Consultant needs to configure the system to allow sales reps to initiate the renewal process for a customer’s active assets directly from a record page. Which component must the consultant implement to provide this one-click renewal capability?",
+    "options": [
+      "A. A screen flow that utilizes the Initiate Renewal invocable action, which can then be exposed as a quick action on the Account or Contract record page",
+      "B. An Apex trigger on the Contract object that automatically clones the contract and its assets when the end date is approaching",
+      "C. A custom Renewal checkbox field on the Asset object that, when checked, triggers a Process Builder to create a renewal opportunity"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "For Lot-based or As-Is Renewals, how should a user trace an Asset's renewal price breakdown back to its original Net Unit Price?",
+    "options": [
+      "A. Review the Asset's Asset State Period record(s).",
+      "B. Review the Asset's Asset Action Source record(s).",
+      "C. Review the Asset's Asset Action record(s)."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers (UC) recently acquired another company called Cloud Kicks (CK). UC uses Revenue Cloud to manage its Product-to-Cash business process. CK manages its process using a custom app with standard Salesforce objects like Asset, Quote, Order, etc. Both Salesforce orgs will be merged into a single org with different processes until a long-term solution is implemented. Sales leadership would like to clearly differentiate between the assets sold by UC and those sold by CK. How should this be achieved out of the box?",
+    "options": [
+      "A. Use Has Lifecycle Management to identify the source as Revenue Cloud or Custom App.",
+      "B. Use a custom field to identify the source as Revenue Cloud or Custom App.",
+      "C. Use Asset Action Source to identify the source as Revenue Cloud or Custom App."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A Salesforce Developer is using Postman to retrieve a JSON response with Product2 IDs to develop a Lightning web component. Which query parameters are valid when using the Products List (POST) API to retrieve a list of products for the component?",
+    "options": [
+      "A. Product2 IDs Catalog IDs Category IDs",
+      "B. Pricebook IDs Catalog IDs Category IDs",
+      "C. Catalog IDs Product Classification IDs"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "On the final day of User Acceptance Testing (UAT), a critical issue is discovered. The tester believes the critical issue is a bug, while the developer asserts it is working as designed. The business representative suspects a training issue, and the project manager views the critical issue as scope creep. What is the next course of action to mitigate this critical issue?",
+    "options": [
+      "A. All involved parties should review the issue, cross-referencing against the approved business requirements, and collaboratively determine if it is a legitimate defect, a training gap, or a new requirement.",
+      "B. Escalate the issue to the steering committee and request an exception to deploy the solution as is; given that it is the final day of UAT, there is no time remaining for further review.",
+      "C. The consultant should review the critical issue, perform root cause analysis, reproduce the issue in the development sandbox, fix it to maintain the go-live date, and deploy it to UAT."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A project is moving from the design phase to the build phase. What should a Revenue Cloud Consultant do to ensure a successful build cycle?",
+    "options": [
+      "A. Set up environments for development, testing, and production, and choose a deployment tool.",
+      "B. Write user stories, have user workshops to confirm requirements, and build test use cases.",
+      "C. Build in the production environment, let users test it live, and provide feedback in real time."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "An agreement was executed using Revenue Cloud’s Contract Lifecycle Management (CLM) functionality, and obligations were created to track compliance for key clauses. What is a reason to create the obligations?",
+    "options": [
+      "A. Obligations can be assigned Owners and Tasks which helps track contractual commitments.",
+      "B. Obligations can be assigned the Fulfilled status to ensure compliance.",
+      "C. Obligations can be assigned Price Discounts to manage contract pricing agreements."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "In the context of a quote or order, the administrator needs to include a Product2 custom field for search. What should the administrator do to accomplish this?",
+    "options": [
+      "A. Add Product2 custom field as a new filter option in the Browse Catalog list view.",
+      "B. Use the Index and Search Configuration page to set the Product2 custom field as searchable and run Rebuild Index job.",
+      "C. Modify the Discover Products screen flow to add the Product2 custom field on the product list page container component."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A product administrator is tasked with creating a Work Anywhere software bundle that has two components. The first component is a VPN license product with a quantity of five (defaulted and cannot be changed). If a customer purchases two instances of the bundle, then it will provide ten VPN licenses. The second component is a classroom training product that the customer will receive only once, regardless of how many bundles are purchased, and the price is included in the bundle's price. What should the product administrator set for the quantity scaling method for each of the bundle components?",
+    "options": [
+      "A. VPN License = Proportional, Classroom Training = None",
+      "B. VPN License = None, Classroom Training = Proportional",
+      "C. VPN License = Proportional, Classroom Training = Constant"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "The billing administrator at Universal Containers noticed that when a new order is activated in Salesforce Billing, a Billing Schedule Group (BSG) and an initial Billing Schedule (BS) are automatically created. Later, when the order is amended to add more product quantity, new BSs are generated, but the original BSG remains active. What is the correct understanding of how BSGs and BSs work in this scenario?",
+    "options": [
+      "A. A BSG groups related BSs under a single order product, even across amendments.",
+      "B. A BSG is used only for reporting; BSs are unrelated to order activity.",
+      "C. BSs are manually created, while BSGs are optional."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "In Salesforce Revenue Cloud, what is the primary role of Context Service in optimizing revenue operations?",
+    "options": [
+      "A. To automate the generation of official sales contracts and essential service agreements",
+      "B. To provide and manage the relevant data inputs and variables required for transactional calculations",
+      "C. To streamline the precise creation and management of product catalogs and bundles"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "Which statement is accurate regarding how products can be modeled and sold?",
+    "options": [
+      "A. Simple products always require at least one child component to be added before they can be sold.",
+      "B. Customers can choose different attributes at the time of quoting for a static product.",
+      "C. A configurable bundled product allows users to customize components and attributes."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A Billing Operations user needs to capture customer credits during negative amends and cancellations to represent a negative invoice balance. This information will be reused later for settling invoices before processing payments. Which Revenue Cloud capability should the Billing Operations user use to do this?",
+    "options": [
+      "A. Debit Memo",
+      "B. Cash Memo",
+      "C. Credit Memo"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A customer purchased a few subscription ramp products on June 20, 2025, with a term of 1 year. On July 5, 2025, they called the sales rep to cancel the service effective June 29, 2025. The sales rep informed the customer that the cancellation cannot be processed for that date. What is the earliest cancellation date that the subscription can be canceled?",
+    "options": [
+      "A. July 5, 2025 – Cancel effective today",
+      "B. June 20, 2025 – Cancel the entire term",
+      "C. June 20, 2026 – Cancel once term expires"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A sales rep creates a quote with a subscription product called 'Training' with a quantity of 50 and term of 1 year, followed by Order creation, activation, and assetization. The 'Training' asset is then amended on the same day to add eight more seats, followed by Order creation, activation, and assetization. How many records will be present for Training for each Asset Action and Asset State Period?",
+    "options": [
+      "A. Two Asset Actions and one Asset State Periods",
+      "B. One Asset Actions and two Asset State Periods",
+      "C. Two Asset Actions and two Asset State Periods"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A product administrator needs to add a required rule using Constraint Modeling Language (CML) so that whenever a product called Desktop is added to a quote, another standalone product called Monitor will be automatically added. What is the correct CML syntax to write this rule?",
+    "options": [
+      "A. type Quote { relation desktop: Desktop[0..99]; relation monitor: Monitor[0..99]; constraint(desktop, monitor, \"Desktop requires Monitor\"); }",
+      "B. type Quote { relation desktop: Desktop[0..99]; relation monitor: Monitor[0..99]; require(desktop[Desktop],monitor[Monitor], \"Desktop requires Monitor\"); }",
+      "C. type Quote { relation desktop: Desktop; relation monitor: Monitor; require(Desktop[Desktop],Monitor[Monitor], \"Desktop requires Monitor\"); }"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A solution architect is leading a discovery session for a complex B2B company. The architect needs to align the product catalog structure to meet stakeholder needs. Each line of business has its own bundling logic, selling models, and approval requirements, but the executive team wants a unified catalog to support reuse, governance, and cross-selling. What should the solution architect do during the session to make sure the product catalog structure aligns with business needs?",
+    "options": [
+      "A. Lead with a shared catalog with reusable components, attributes, and selling models tailored per business need.",
+      "B. Prioritize stakeholder preferences for custom bundles so each bundle independently supports different business units.",
+      "C. Design multiple catalogs for each business unit to isolate business logic and reduce dependencies."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud requirement states that when the \"Terabyte\" Attribute of \"Product A\" is greater than 100, a warning message should appear. How should a consultant address this in Revenue Cloud?",
+    "options": [
+      "A. Create a constraint rule in the Constraint Model at the Quote Level.",
+      "B. Create a custom Lightning web component to validate the attribute quantity.",
+      "C. Create a constraint rule in the Constraint Model at the Product Level."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant needs to identify and capture the latest active Contract to which an Asset belongs. Which build steps should the consultant take to meet their goal?",
+    "options": [
+      "A. Build a Contract lookup field on Asset. Build a record-triggered flow to traverse all the related Contracts of the Account to which the Asset belongs. Then take the latest active Contract and update Asset's new Contract lookup field with its record ID.",
+      "B. Build a Contract lookup field on Asset. Create a ContractId tag in context definition for Assets and map the ContractId tag to this new Asset Contract lookup field. Update the OrderToAsset context definition to map Order's ContractId tag to Asset's ContractId tag.",
+      "C. Build a Contract lookup field on Asset. Upon Asset update, use automation to find the latest-dated Asset Contract Relationship record of the Asset and copy its ContractId into this lookup field."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant needs to deploy a custom decision table into a staging sandbox. What is the correct sequence of activities required for this deployment?",
+    "options": [
+      "A. Deploy the decision table into the staging sandbox. Map the decision table in the default pricing recipe. Import the data for the decision table, then refresh the decision table.",
+      "B. Deploy the custom object and decision table into the staging sandbox. Map the decision table in the default pricing recipe. Import the data for the custom object, then sync Pricing.",
+      "C. Deploy the custom object and decision table into the staging sandbox. Map the decision table in the default pricing recipe. Refresh the decision table or sync Pricing."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A consultant wants to inherit all the standard components of the standard context SalesTransactionContext, such as nodes, attributes, and mappings from a standard context definition, and customize the definition by adding new components. The consultant also wants to ensure that they can easily obtain the upgraded standard components as needed, based on the latest version, without losing any of the customizations that were made. What should the consultant do to achieve this?",
+    "options": [
+      "A. Upgrade SalesTransactionContext.",
+      "B. Clone SalesTransactionContext.",
+      "C. Extend SalesTransactionContext."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A company processes orders. When the orders are activated but not submitted, the company wants the assets to be automatically created. How should a Revenue Cloud Consultant automatically create assets for all order products?",
+    "options": [
+      "A. Use the Assetize Order flow.",
+      "B. Use the Submit Order for Fulfillment flow.",
+      "C. Use the Activate action on the order."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A Global System Integrator (GSI) provides consulting services by offering a variety of roles and skills based on the needs of the customers. The GSI has a global workforce of 30,000 consultants with expertise in many different technologies. Currently, the GSI uses standard Salesforce functionality to quote using Opportunities, Quotes, and Pricebooks. As its consultants have so many different roles and skills, it maintains a large product catalog with upward of a million SKUs. A new product is created each time a new skill is added. How should the GSI use Revenue Cloud to solve its SKU proliferation issue?",
+    "options": [
+      "A. Use Product Category to rationalize the product catalog.",
+      "B. Use Product Attributes to rationalize the product catalog.",
+      "C. Use Product Classification to rationalize the product catalog."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant needs to create a dynamic product bundle where the available options and default selections are determined by the customer’s industry, a field stored on the parent Opportunity record. How should the consultant achieve this?",
+    "options": [
+      "A. By using a before-save flow on the Quote object to validate the product selections against the Opportunity’s industry field to prevent an invalid configuration from being saved",
+      "B. By creating a Product Configuration Rule that reads the Opportunity’s industry field and applies the logic before the configurator UI loads, and ensures that all actions are executed",
+      "C. By defining a context-aware rule using the Constraint Model that references the Opportunity’s industry field to enforce product selection or set attribute values"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers sells customizable laptops. A fulfillment designer needs to ensure that selected specifications (for example, RAM, SSD) from the commercial laptop product are correctly transferred to its technical product components during decomposition for accurate fulfillment. Which mechanism should the fulfillment designer use to transfer the technical product components?",
+    "options": [
+      "A. Quote Line Mapping",
+      "B. Field & Attributes Mapping",
+      "C. Decomposition Execution Rules"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "An IT service provider purchased Revenue Cloud. Currently, the provider needs to mark its Super Duper Product as an automatically renewable product with no manual interaction from users. How should a Revenue Cloud Consultant handle this requirement?",
+    "options": [
+      "A. Select the Auto Renew checkbox on the product selling model.",
+      "B. Select the Auto Renew checkbox on the Asset object.",
+      "C. Select the Auto Renew checkbox on the Product2 object."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A consultant is tasked to create an advanced decision table that will provide a discount % as output based on the following scenario. The discount is eligible for Partner accounts where they have products ordered in quantities greater than 100, or if customers order an accessory in quantities greater than 100. Conditions: Account Source = Partner Ordered Quantity > 100 Product Category = Accessory While defining the conditions during the creation of a decision table, how should the consultant configure the table to satisfy the conditions above?",
+    "options": [
+      "A. Condition Type = Custom Logic & Custom Logic = (1 OR 2) AND (2 AND 3)",
+      "B. Condition Type = Custom Logic & Custom Logic = (1 AND 2) OR (2 AND 3)",
+      "C. Condition Type = All conditions are met (AND) & Custom Logic = 1 AND 2 AND 3"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "After activating an order for a usage-based analytics subscription, a billing specialist wants to confirm that the system has generated the necessary components to support usage tracking, entitlement enforcement, and billing readiness. Which set of records is created automatically as part of the usage management process?",
+    "options": [
+      "A. Asset, Entitlement Policy, Wallet",
+      "B. Product Consumption Summary, Rate Adjustment Entry, Billing Event",
+      "C. Usage Entitlement Account, Usage Entitlement Bucket, Wallet"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A product bundle has defined a constraint model that is currently in use and has been actively sold for the last few months. A new product will be launched next month and will be sold as part of the same bundle. The product designer updated the bundle structure under Product Catalog Management to add the new product. What must the product designer do to ensure that the child product is added to the constraint model within the product bundle?",
+    "options": [
+      "A. Use the Visual Builder to add the child product to the constraint model, then import the associations for the type from Product Catalog Management.",
+      "B. Once a bundle is updated in Product Catalog Management, create a constraint model, then import the associations from Product Catalog Management.",
+      "C. Create a new type for the child product in the Constraint Modeling Language (CML) Editor, then import the associations for the type from Product Catalog Management."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers went live with Revenue Cloud 90 days ago. Since then, the sales team has been using Revenue Cloud to perform all of their business transactions, from New Sales to Renewals. Sales leaders requested the IT team to provide insights into trends like monthly and annual recurring revenue, renewal rates, accounts up for renewal, and the overall financial state of the accounts. Which out-of-the-box dashboard should the IT team use for these insights?",
+    "options": [
+      "A. Order Analytics",
+      "B. Subscription and Revenue Lifecycle Analytics",
+      "C. Pricing Analytics"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "What are the steps a user should take to Renew an Asset?",
+    "options": [
+      "A. Create Renewal Quote with Asset, Create Contract, Activate Contract",
+      "B. Create Renewal Quote with Asset, Create Order, Activate Order",
+      "C. Create Renewal Quote with Asset, Create Order, Create Contract"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A sales rep is beginning the process of renewing a customer’s expired assets in Revenue Cloud. What is the first step the sales rep should take?",
+    "options": [
+      "A. Override Renewal Term using the Managed Assets Component on the Account/Contract record.",
+      "B. Update the Assets Lifecycle End Date on the Current Asset State Period and Asset Action records.",
+      "C. Create a new Quote/Order record and manually add the expired assets in the Transaction Line Editor."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A Salesforce Consultant duplicated the amend, renew, and cancel Salesforce flow to customize it, allowing users to attach an existing Opportunity when clicking “Amend,” “Renew,” or “Cancel” on the Manage Asset Viewer. The new flow has been activated, but when users click any of the buttons, the original behavior still occurs. Which step did the consultant likely miss?",
+    "options": [
+      "A. The consultant did not select the new flow in the Manage Asset Viewer component in the Lightning Record page.",
+      "B. The consultant did not update the managing assets flow under Revenue Settings to point to the new flow.",
+      "C. The consultant did not associate the new flow under the Product Discovery Settings."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A company is implementing Revenue Cloud. The company uses complex and varying tax calculations, so some of its existing products have tax calculated in a custom application. A business decision was made to keep using the custom application for the existing products and use Revenue Cloud for any new product introductions. How should the company generate and post invoices, including the taxes for the existing products?",
+    "options": [
+      "A. Integrate AppExchange apps of partners with the Billing TaxEngineAdapter Apex interface.",
+      "B. Import External Tax Lines into Billing from the custom application via CSV.",
+      "C. Integrate the custom app with the Billing TaxEngineAdapter Apex interface."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A Salesforce Consultant has been asked to identify and extract contract details and clauses from a PDF that holds the information of a historical signed contract. The consultant will use Contracts AI to achieve this requirement. A prerequisite to using Contracts AI is to set up a contract extraction template. When creating a contract extraction template, which template details does the consultant need to fill in to allow the selection of an existing context definition?",
+    "options": [
+      "A. Record Type and Field Mapping",
+      "B. Attribute Definition and Field Mapping",
+      "C. Attribute Definition and Context Mapping"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A customer is integrating Revenue Cloud with their ecommerce website. Orders will be placed directly from the website and may include up to 1,000 products. Which Revenue Cloud API will work for this integration?",
+    "options": [
+      "A. Create Order",
+      "B. Place Sales Transaction",
+      "C. Place Order"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A customer is migrating asset data into Revenue Cloud and needs to generate Asset Actions, Asset State Periods, and edit Lifecycle Asset fields. Which permission does the customer need to achieve this?",
+    "options": [
+      "A. Customer Asset Lifecycle Management",
+      "B. Lifecycle-managed asset",
+      "C. InitiateAmend, InitiateCancellation, Initiate Renewal"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant wants to customize the Transaction Line Editor to display an existing custom field, Estimated Delivery Date, for sales reps when they are working on Quote record pages. What is the correct method to achieve this customization?",
+    "options": [
+      "A. Add Estimated Delivery Date as a selected field to the Transaction Line Editor component in the Quote Lightning Record page.",
+      "B. Enable ‘Instant Pricing’ under Revenue Settings to automatically display all custom fields on the Transaction Line Editor.",
+      "C. Add the Estimated Delivery Date field to the relevant Quote Line Item page layout to display the field in the Transaction Line Editor."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A development team is designing a new Salesforce solution. During the design phase, a team member suggests incorporating a feature that was showcased on a future Salesforce product roadmap. Given Salesforce's 'Safe Harbor' statement, how should the team approach this suggestion regarding their current design?",
+    "options": [
+      "A. The team can design and build the solution based on the future roadmap items as they will become available soon.",
+      "B. All design elements must adhere to the current, generally available features and avoid any unreleased features shown on the roadmap.",
+      "C. With verbal confirmation from a Salesforce Product Manager, the team can incorporate design elements based on roadmap items."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A customer wants to change specific line items of the order after it has been submitted but before it has been fulfilled. The system administrator has granted permissions to allow the order management team to make this change, but they are unable to do so. What is the reason for this issue?",
+    "options": [
+      "A. The entire order is asseized.",
+      "B. The entire order is activated.",
+      "C. The entire order is decomposed."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A company sells a wide range of products across multiple business units. Each product must support different selling models, such as one-time, term-based, and evergreen. The company wants to bundle these products in configurable ways without duplicating product records. Additionally, product attributes should be reusable across offerings, and product teams need to maintain the catalog with minimal manual effort. Given these requirements, how should a consultant design the product catalog in Revenue Cloud?",
+    "options": [
+      "A. Create separate product records for each business unit and selling model combination to handle variations independently.",
+      "B. Use product classifications for attribute reuse and apply selling models at the product level to support flexibility.",
+      "C. Use static bundles with hard-coded attributes for each selling model to simplify configuration."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A smartphone product is currently sold as a one-time upfront payment. In order for it to be sold with equal monthly installment payments for 12 months, what should the consultant set up?",
+    "options": [
+      "A. Assign a product selling model option of Term Monthly to the product.",
+      "B. Assign a product selling model option of Term Annual to the product.",
+      "C. Assign a product selling model option of Evergreen Monthly to the product."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "An administrator is configuring a subscription product in Revenue Cloud for a customer whose order starts on January 1. The finance team wants to collect payment before the service begins so that each invoice is sent on the 15th of the prior month. Which Billing Type should the Billing Treatment Item have to meet this requirement?",
+    "options": [
+      "A. Arrear",
+      "B. Advance",
+      "C. None"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A product designer is setting up a product bundle that consists of T-shirts and caps. They want to ensure customers can order a maximum of three T-shirts and three caps, but the total number of products should not exceed five. How should the product designer set this up?",
+    "options": [
+      "A. Define the local cardinality for T-shirts with a minimum quantity of three and a maximum quantity of three. Define the local cardinality for caps with a minimum quantity of three and a maximum quantity of three. Define a product group that contains both of these products, and set the group cardinality with a minimum quantity of one and a maximum quantity of six.",
+      "B. Define the local cardinality for T-shirts with a minimum quantity of one and a maximum quantity of three. Define the local cardinality for caps with a minimum quantity of one and a maximum quantity of three. Define a product group that contains both of these products, and set the group cardinality with a minimum quantity of one and a maximum quantity of five.",
+      "C. Define the local cardinality for T-shirts with a minimum quantity of one and a maximum quantity of three."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A customer reaches out to the Billing Operations of a company requesting to change their monthly billing date. Their current billing date is the 15th of each month, but the customer would like it changed to the 20th of each month. On the forthcoming cycle, the customer has also requested to move the billing date to April 22 for this month only. Which steps should Billing Operations take to meet this request?",
+    "options": [
+      "A. The Billing Operations user should select the Billing Schedule Group(s) (BSG) for that asset, and change the parameters on the transaction to the 20th for Billing Day of Month and to the 22nd of April for Override Next Billing Date by doing an inline edit.",
+      "B. The Billing Operations user should process an Amendment canceling the existing Asset and creating a new Asset with the start date of 20th, and then update the Billing Schedule Group’s Override Next Billing Date to 22nd April.",
+      "C. The Billing Operations user should process a change order with Period Boundary Day on the Order Item as 20th and update the Override Next Billing Date on the Billing Schedule Group to 22nd of April by doing an inline edit."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A product administrator needs to use the Constraint Modeling Language (CML) construct available in Advanced Configurator to define a relationship for a House with up to five rooms. The relationship also requires that a MediaRoom in the color blue must be included when the house has more than three rooms. Which option should the administrator use to accomplish this?",
+    "options": [
+      "A. type House { relation rooms: Room[4,5]; require(rooms.size > 3, rooms[MediaRoom]{color = \"Blue\"}) };",
+      "B. type House { relation rooms: Room[0..5]; require(rooms.size > 3, rooms[MediaRoom]{color = \"Blue\"}) };",
+      "C. type House { relation rooms: Room[0..5]; require(rooms.size > 3, House[MediaRoom=true, color = \"Blue\"}) };"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant wants to automatically sync the family field (Family) from the Product2 object to the Quote Line custom field (Family__c) during quoting. How should the consultant address this using only Revenue Cloud functionality?",
+    "options": [
+      "A. Create an Apex trigger on the quote line item to query the information from the Product2 ‘Family’ field and write it back to the Quote Line.",
+      "B. Update the Product Discovery Context by mapping the Catalog Product and the Product2 nodes and then mapping the Family and Family__c fields.",
+      "C. Update the Pricing context definition by mapping the Catalog Product and the Product2 nodes and then mapping the Family and Family__c fields."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A software company wants to offer a Premium Suite bundle that includes multiple applications and support services at a discounted price compared to purchasing each component individually. The company also needs to apply different discounts to this bundle based on custom conditions. Which pricing element must the company use to define the bundle pricing logic and then to calculate its price within a pricing procedure?",
+    "options": [
+      "A. Attribute-Based Price and Volume Discount",
+      "B. Bundle-Based Price and Price Adjustment Matrix",
+      "C. Bundle-Based Price and Product Selling Model"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant is writing a constraint rule in Constraint Modeling Language (CML) to prevent customers from selecting a red laptop case if the selected laptop model is Executive Pro. The consultant anticipates that this color restriction might apply to other products in the future and wants to make the rule easier to maintain and reusable across multiple rules. Which approach should the consultant take?",
+    "options": [
+      "A. Create a local variable called BlockedColor and assign it red in each rule.",
+      "B. Hard code red directly in each constraint rule.",
+      "C. Use a global constant for red so it can be referenced consistently across all constraint rules."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "Sales leadership would like to see an accurate forecast of the sales pipeline based on the opportunity data. For this, they asked the sales team to make sure they take the necessary steps during the sales cycle to keep the forecast up to date at all times. Which action should a sales rep take to ensure this?",
+    "options": [
+      "A. Set the Syncing field to True.",
+      "B. Sync the Primary quote.",
+      "C. Start Sync quick action."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A company selling hardware and software needs to implement a 2-day delay for software provisioning after hardware delivery in its order-to-cash process. While configuring the Dynamic Revenue Orchestrator (DRO) plan, the Fulfillment Designer notices the option for adding this delay is not visible on the provisioning task. What should the Revenue Cloud Consultant enable to add this option for the Fulfillment Designer?",
+    "options": [
+      "A. Future-Dated Steps in the DRO settings",
+      "B. Modify All Data permission in the Fulfillment Designer's profile",
+      "C. Link Task to Step Source button in the DRO settings"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "During a quote-to-contract conversion process, a popup is displayed that asks the user to select the appropriate quote prices or discounts to be added to the contract. The Revenue Cloud Consultant is tasked with removing the ‘None’ option from this popup. How should the consultant remove this option?",
+    "options": [
+      "A. Modify the screen flow Create Contract From Quote.",
+      "B. Modify the Contract Item Price object’s Discount Type field picklist values.",
+      "C. Modify the Lightning web component corresponding to the popup."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A customer needs to migrate existing active subscriptions from Salesforce CPQ to Revenue Cloud. What should the customer do to accomplish this?",
+    "options": [
+      "A. Convert the subscriptions to order lines and use the Create or Update Asset From Order Item Action API.",
+      "B. Convert the subscriptions to orders and create assets using Place Sales Transaction API.",
+      "C. Convert the subscriptions to assets using the Initiate Amendment Action API."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant is defining relationships in Constraint Modeling Language (CML) to model a house that must contain rooms. The house must have at least one and at most five rooms, and exactly two bathrooms. The consultant also wants the system to instantiate rooms in a specific order – first a Living Room, then a Bedroom – when rooms are created. Which script correctly defines these relationships in CML?",
+    "options": [
+      "A. type House { relation rooms: Room[0..5] order (Bedroom, LivingRoom); relation bathrooms: Bathroom[2]; } type Room; type LivingRoom: Room; type Bedroom: Room; type Bathroom: Room;",
+      "B. type House { relation rooms: Room[1..5] order (LivingRoom, Bedroom); relation bathrooms: Bathroom[2]; } type Room; type LivingRoom: Room; type Bedroom: Room; type Bathroom: Room;"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant needs to update the flow used to browse the catalog. The consultant made the changes and activated the flow but is not seeing the changes during testing. Which step did the consultant miss?",
+    "options": [
+      "A. Adding the Flow Name in the Pricing Settings Setup.",
+      "B. Adding the Flow Name in the Product Discovery Setup.",
+      "C. Adding the Flow Name in the Revenue Settings Setup."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A sales rep at an SaaS company observes that a recent renewal quote for a premium software subscription, which includes several add-on modules and usage-based tiers, is displaying an unexpected total price. The customer is disputing the amount, stating it is higher than anticipated based on their contracted terms. The pricing consultant suspects an issue with how the pricing rules are being applied. What is the first diagnostic step the consultant should take to investigate the pricing calculation?",
+    "options": [
+      "A. Manually adjust the disputed total price on the quote to the customer's anticipated amount.",
+      "B. Deactivate the entire pricing procedure and then reactivate it to force a re-evaluation.",
+      "C. Use the pricing procedure's Simulate functionality to trace the price waterfall."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers (UC) sells its products and services to other businesses, and provides an automatic discount to businesses that buy in bulk. UC is now expanding its selling channels and plans to sell directly to end users. A key requirement is to ensure that bulk discounts are only applicable to businesses and not individual buyers. How should the Revenue Cloud Consultant solve this requirement?",
+    "options": [
+      "A. By using Quote Transaction Type and Volume-Based Pricing",
+      "B. By using Sales Transaction Type and Volume-Based Pricing",
+      "C. By using Order Transaction Type and Volume-Based Pricing"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A company is implementing Revenue Cloud to automate its subscription renewals. A Revenue Cloud Consultant needs to configure the system to allow sales reps to initiate the renewal process for a customer's active assets directly from a record page. Which component must the consultant implement to provide this one-click renewal capability?",
+    "options": [
+      "A. An Apex trigger on the Contract object that automatically clones the contract and its assets when the end date is approaching",
+      "B. A screen flow that utilizes the Initiate Renewal invocable action, which can then be exposed as a quick action on the Account or Contract record page",
+      "C. A custom Renewal checkbox field on the Asset object that, when checked, triggers a Process Builder to create a renewal opportunity"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A company purchased Revenue Cloud. The project scope includes the entire Product-to-Cash lifecycle including Dynamic Revenue Orchestrator and Contract Lifecycle Management (CLM). As part of CLM, the company would like to perform internal and external collaborative redlining. With which cloud computing provider does Salesforce need to integrate?",
+    "options": [
+      "A. Google Cloud Platform (GCP)",
+      "B. Microsoft Azure",
+      "C. Amazon Web Services (AWS)"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "What is the formula to calculate the current Monthly Recurring Revenue (MRR)?",
+    "options": [
+      "A. MRR = (20 × $1,000) / 12",
+      "B. MRR = (20 × $1,000) / 36",
+      "C. MRR = ((20 × $1,000) + (30 × $1,000) + (40 × $1,000)) / 36"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A sales user created a quote with one line item last week, and new features were deployed to production over the weekend. This week, the sales user observed several issues while configuring the quote: The Browse Catalog is not showing products, and configuring any of the existing line items is showing the error \"Something went wrong while processing your configuration changes.\" What is a reason for the issues?",
+    "options": [
+      "A. The context definition for the pricing procedure must use the context definition selected on the Revenue Settings page.",
+      "B. The context definition for the pricing procedure must use the context definition selected on the Product Discovery Settings page.",
+      "C. The context definition for the pricing procedure must use the context definition selected on the Pricing Setup page."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A new order is created with these details: The account has a default Billing Profile with a billing address in San Francisco. An order is created associated with this account with a billing address in New York. The order has a billing account attached with a billing address in Chicago. When billing processes the order, which city will be used?",
+    "options": [
+      "A. New York",
+      "B. Chicago",
+      "C. San Francisco"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "An order fulfillment orchestrator designer is setting the decomposition scope to Order Line Item at the product record level. The designer created the necessary decomposition rules in a Dynamic Revenue Orchestrator (DRO)-enabled sandbox. To test the changes, an order is created with line items that have the same product for which the decomposition rules exist. What will happen when the order is activated?",
+    "options": [
+      "A. For every order line item that decomposes, one instance of the fulfillment order line item is created per order item.",
+      "B. For every order line item that decomposes, multiple instances of the fulfillment order line item are created per order item.",
+      "C. For every order line item that decomposes, a single instance of the fulfillment order line item is created combining all order items."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant is configuring a product catalog in Salesforce Revenue Cloud for an electronics manufacturer. The team requires real-time product filtering during the quote process, based on customer tier, location, and purchase history. The consultant needs to use a context definition to pass the required data to the qualification rule. Which configuration correctly uses a context definition for this customer?",
+    "options": [
+      "A. Configure a Product Discovery context definition with nodes and attribute mappings for account tier and location, so this data can be evaluated by the rules during Browse Catalog.",
+      "B. Create a Sales Transaction context definition to control which products are visible in the catalog based on the user's profile, leveraging context tags to enforce record visibility.",
+      "C. Use the Product2 object to create custom fields and assign page layouts that dynamically control product availability using context definition tags and validation rules."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A customer currently uses the standard Quote and Order objects and wants to distinguish the records created by Revenue Cloud. How should a Revenue Cloud Consultant differentiate the records created by Revenue Cloud from other processes?",
+    "options": [
+      "A. Find a related record for the Application Usage Assignment object with the value of Revenue Lifecycle Management.",
+      "B. Verify that the Record Type of Quote and Order are set to Revenue Lifecycle Management.",
+      "C. Check Quote and Order Transaction Type field picklist value to be Revenue Lifecycle Management."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant needs to add a new custom field to the pricing context definition and use it in a pricing procedure. The consultant added the attribute to the context definition, but it is not available in the pricing procedure. Which step did the consultant miss?",
+    "options": [
+      "A. Add a tag to the field attribute.",
+      "B. Activate the context definition.",
+      "C. Clone the pricing procedure."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "An approval administrator has enabled Smart Approvals and configured it for finance approval by checking Use Smart Approval. The sales manager reports that the new functionality of Smart Approvals does not work. What is causing the issue?",
+    "options": [
+      "A. The condition in the stage is the same as the condition on the step.",
+      "B. The condition in the stage is not same as the condition on the step.",
+      "C. There are two conditions on the stage, but only one condition in the step."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A company has a policy requiring all new business quotes to be automatically associated with an Opportunity to ensure accurate forecasting. How should a consultant enforce this policy so that users are unable to create a quote without an Opportunity?",
+    "options": [
+      "A. Create a validation rule on the Quote object to ensure OpportunityId is not null.",
+      "B. Update Opportunity Settings and enable “Require Quotes on Opportunities.”",
+      "C. Update Quote Settings and set “Create Quotes Without a Related Opportunity” to False."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A global enterprise is implementing Salesforce Revenue Cloud to simplify collaboration between sales, finance, and legal teams throughout the revenue lifecycle. The organization’s key goal is to have a single source of truth to understand where the order is in its lifecycle without relying on disconnected tools or manual handoffs. How does Dynamic Revenue Orchestrator (DRO) help meet these goals?",
+    "options": [
+      "A. DRO automates the revenue lifecycle.",
+      "B. DRO automates the order lifecycle and streamlines fulfillment.",
+      "C. DRO automates the entire quote to order lifecycle."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A pricing administrator aims to configure pricing for a smartphone so that the monthly installment price varies based on the selected memory options (128 GB, 256 GB, 512 GB) and contract term options (12 months, 24 months). The price should be equally divided for each month, considering the combinations of memory and contract term as price impacting attributes, with no interest charges applied. How many records need to be present in the Attribute-Based Adjustments pricing schedule to satisfy this scenario?",
+    "options": [
+      "A. 6",
+      "B. 3",
+      "C. 5"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A sales user has a customer with varying quantities (upsells) and subscription prices throughout their last contract term. The customer is ready to renew, and the sales user wants to maintain the same prices for their renewal. What should the sales user do in Asset Management to keep the prices the same?",
+    "options": [
+      "A. Customize Assetize Order flow.",
+      "B. Set Pricing Source on Asset to Last Negotiated Price.",
+      "C. Enable Lot-based or As-is Renewals."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A Global System Integrator (GSI) provides consulting services by offering a variety of roles and skills based on the needs of the customers. The GSI has a global workforce of 30,000 consultants with expertise in many different technologies. Currently, the GSI uses standard Salesforce functionality to quote using Opportunities, Quotes, and Pricebooks. As its consultants have so many different roles and skills, it maintains a large product catalog with upward of a million SKUs. A new product is created each time a new skill is added. How should the GSI use Revenue Cloud to solve its SKU proliferation issue?",
+    "options": [
+      "A. Use Product Attributes to rationalize the product catalog.",
+      "B. Use Product Classification to rationalize the product catalog.",
+      "C. Use Product Category to rationalize the product catalog."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A product administrator creates a product by associating it with a product class that has three attributes assigned. Two of these attributes are to be used for attribute-based pricing only for this product. How should the product administrator ensure that these two attributes can be used for attributebased pricing?",
+    "options": [
+      "A. Edit the attribute associated to a product classification and set the 'Is Price Impacting' flag.",
+      "B. Edit the attribute definition and set the 'Is Price Impacting' flag.",
+      "C. Edit the inherited attributes at the product level and set the 'Is Price Impacting' flag."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant wants to restrict the ability to cancel subscriptions via the cancel button in the Account > Managed Assets view. The consultant wants to ensure that only a select group of super users has access to this functionality. Which change does the consultant need to apply for this requirement?",
+    "options": [
+      "A. Inactivate the Amend, Renew, and Cancel Assets screen flow for users who should not have access to the cancel button.",
+      "B. Unassign Initiate Cancellation API permission for users who should not have access to the cancel button.",
+      "C. Modify the Managed Asset Viewer page layout for users who should not have access to the cancel button."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A product administrator notices that the price of a warranty product is not being calculated correctly. It should be calculated as 10% of another equipment product’s list price, but only when the products are purchased together in the same quote or order. This calculation works correctly for other products, but not for this specific warranty product. How should the product administrator resolve this issue?",
+    "options": [
+      "A. Find the Derived Price element and add the appropriate input/output variables in the pricing procedure.",
+      "B. Find the Derived Price record where Product = Warranty and set the Derived Pricing Scope to Transactional.",
+      "C. Find the price book entry of the equipment product and enable the Is Derived checkbox."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud customer sells products that have a large number of attributes. The customer wants to change certain price-impacting attributes without making additional changes to the contract, such as quantity change, addition of new products, etc. How should a consultant do this using out-of-the-box Revenue Cloud functionality?",
+    "options": [
+      "A. Perform a Cancel/Replace.",
+      "B. Perform a Standard Amendment.",
+      "C. Perform an Early Renewal."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A product designer created a new simple product and ensured that the product is active, has a product selling model, has a price book entry, and has a category. Few other settings are enabled in the organization's setup: Advanced Configuration Rules and Constraints, Use Indexed Data for Product Listing and Search, Guided Product Selection, and Ramp Deals. The new product is not appearing in Browse Catalog. Which step did the product designer miss?",
+    "options": [
+      "A. Rebuild Constraint Model.",
+      "B. Rebuild Ramp Segment.",
+      "C. Rebuild Index."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A customer wants to remove the option to override the renewal term during an asset renewal process initiated from the Account > Managed Assets view. How should a Revenue Cloud Consultant fulfill this requirement?",
+    "options": [
+      "A. Modify the Lightning web component corresponding to the renew assets page and remove the option for early renewal.",
+      "B. Modify the flow Amend, Renew, and Cancel Assets screen component for renewal term and remove the option for early renewal.",
+      "C. Modify the flow Renew Assets screen component for renewal term and remove the option for early renewal."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant is helping a customer cancel a portion of their subscription for a product that was purchased multiple times over the past year, each at a different price point. When the cancellation is processed, the refund or credit amount will be based on the purchase price of the product. Which pricing strategy is being used to determine the cancellation value?",
+    "options": [
+      "A. FIFO (First In, First Out) – Uses the earliest asset’s price to determine the refund or credit.",
+      "B. Average Cost – The system averages the prices of all purchases to calculate the cancellation value.",
+      "C. LIFO (Last In, First Out) – Uses the most recent asset’s price to determine the refund or cancellation credit."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "When a Ramped Asset is renewed using the Initiate Renew API, what happens to its quote line(s) in a renewal quote?",
+    "options": [
+      "A. A quote line for each ramp segment is created but not ramped.",
+      "B. The Ramped Quote Lines are recreated onto the renewal quote.",
+      "C. One quote line is created for the Asset, and it is no longer ramped."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "When activating an order with a contract attached, the Revenue Cloud sales rep notices that the contract does not show any related assets. What caused this to happen?",
+    "options": [
+      "A. The Asset Contract Relationship toggle is not active in Setup → Revenue Settings → Automatically create Asset Contract Relationship.",
+      "B. The sales rep did not manually create the Asset Contract Relationship records in order for the Contract to be linked to the Assets.",
+      "C. The Contract does not have the Revenue Lifecycle Management record attached to it, so the system does not automatically create the Asset Contract Relationship records."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant needs to add clauses to a Master Subscription Agreement (MSA) document template. The consultant already has the DocGen Designer and Clause Designer User permission sets assigned. Which additional permission set assignment does the consultant need to begin building this document template?",
+    "options": [
+      "A. OmniStudio Admin",
+      "B. Obligation Assignee",
+      "C. Microsoft 365 Word Designer"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "When selecting products to add to a quote, a sales user updates an attribute represented by a custom field. The user intends to use the selected value in other downstream processes. Which Mapping Intent should they select when creating the Mapping for the context definition?",
+    "options": [
+      "A. Association",
+      "B. Hydration",
+      "C. Persistence"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A consultant is creating a decision table using a predefined template for product eligibility and availability. Which object types can the consultant use as evaluation criteria during product selection?",
+    "options": [
+      "A. Product Price Book or Product Schedule",
+      "B. Product Relationship or Product Attribute",
+      "C. Product Qualification or Product Category Qualification"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "An issue is reported during User Acceptance Testing (UAT). Which initial steps should the implementation team take to ensure efficient resolution and proper resource allocation?",
+    "options": [
+      "A. Assume it is a legitimate defect and assign any identified issue directly to the development team so they can fix and deploy the solution.",
+      "B. Prioritize the issue based solely on its impact on project timelines, fixing any issue that is easy to fix and deferring any deep investigation into its root cause.",
+      "C. Conduct root cause analysis for the issue to determine if it's a legitimate defect, a user training gap, or a new feature request, then route it to the appropriate team."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "Which valid actions can a consultant perform on a standard context definition?",
+    "options": [
+      "A. Deactivate & Edit",
+      "B. Extend & Clone",
+      "C. Copy & Edit"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A sales rep adds a bundle product from the Browse Catalog and saves it to their quote. They are unable to configure the bundle from the Transaction Line Table or Browse Catalog. Which permission is the sales rep missing?",
+    "options": [
+      "A. Product Configuration Rules User",
+      "B. Advanced Configurator Designer",
+      "C. Product Configurator"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A high-tech company offers cloud storage services and wants to define different rates for API calls based on customers' usage patterns. How should a consultant set up this requirement?",
+    "options": [
+      "A. Use base card entries",
+      "B. Use attribute rate entries",
+      "C. Use tier rate entries"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A sales rep creates a quote with a subscription product called Monitoring with a quantity of 25 and a term of 36 months, followed by order creation, activation, and assetization. Monitoring has associated Product Ramp Segments with Segment Type set to Yearly. How many records will be present for Monitoring for each Asset Action and Asset State Period?",
+    "options": [
+      "A. One Asset Action and three Asset State Periods",
+      "B. One Asset Action and one Asset State Period",
+      "C. Three Asset Actions and three Asset State Periods"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers (UC) created a custom formula field called Annual Contract Value on the Asset object. UC wants this field visible during asset selection for amendment/renewal. How should a consultant enable this behavior?",
+    "options": [
+      "A. Modify the Managed Asset Viewer component on the Lightning page",
+      "B. Modify the Asset related list on Page Layout",
+      "C. Modify the screen flows in the amend, renew, and cancel flow"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A business is undergoing a digital transformation. As part of the process, sales leadership wants the contracting process fully digitized, including clause generation, redlining, e-signature, and related activities. Which capability should the implementation consultant use?",
+    "options": [
+      "A. Salesforce Contracts Connector for Word",
+      "B. OmniStudio Document Generation",
+      "C. Document Builder"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "In Salesforce Revenue Cloud, a consultant is setting up a new user who will primarily be responsible for managing customer assets. What is a fundamental requirement to ensure this user can effectively view and manage customer assets?",
+    "options": [
+      "A. The products must be configured as assetizable, and the createOrUpdateAssetFromOrder flow action should be triggered.",
+      "B. The user must have the Customize Application permission enabled on their profile to view the Assets on Accounts.",
+      "C. The Asset viewer must have a Salesforce CPQ Plus license assigned to access the Asset-related objects."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A customer would like to begin implementing Revenue Cloud to better manage its selling, fulfillment, and financial processing. Which strategy should the company use for a successful Revenue Cloud implementation?",
+    "options": [
+      "A. Assemble a team with expertise in Quote-to-Cash processes, create a phased plan covering core setup, and scope activities such as data migration and customization.",
+      "B. Prioritize the setup of developer tools like IDX Workbench and Postman, and focus primarily on custom Apex and Lightning Web Component development to meet unique business needs.",
+      "C. Immediately enable all Revenue Settings, create all user profiles, and assign all recommended permission sets to the System Administrator to accelerate the technical configuration."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A company is experiencing delays in the order installation process due to missing information. Installation information must be included on all orders so the installation team can complete their tasks without delay. What should a Revenue Cloud Consultant recommend?",
+    "options": [
+      "A. Create technical products to provide all the details needed for installation.",
+      "B. Create a commercial product called Installation to provide all the details needed for installation.",
+      "C. Create a description field on Products to provide all the details needed for installation."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A user reports they cannot see the Managed Asset Viewer on the Account record page. A Revenue Cloud Consultant investigates and confirms that the Managed Asset Viewer component has not been added. How should the consultant ensure users can view and edit asset data using the Managed Asset Viewer?",
+    "options": [
+      "A. In Lightning App Builder, drag the Managed Asset Viewer to the Account record page. Select the checkbox to show the side panel when a user clicks a record link.",
+      "B. Assign the user a permission set that grants Read access to Account record pages and Read access to Assets. Next, drag it onto the Account page layout.",
+      "C. Verify that the user has the Revenue Lifecycle Management license. Then, enable the Assets related list on the Account record page to show the Managed Asset Viewer."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A company using Revenue Cloud experiences frequent change requests after the customer accepts the quote and the order is activated. Order managers want the ability to change orders after activation but before fulfillment. Which out-of-the-box permission set should be assigned to Order Managers to support in-flight order changes?",
+    "options": [
+      "A. Place Superseded Order",
+      "B. Place Supplemental Order",
+      "C. Place Change Order"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A product's attributes are organized across attribute categories Tech Specs and Utilization, but two attributes are not assigned to any category. This product is added as a component in a bundle. In what order will attribute categories appear in the configurator?",
+    "options": [
+      "A. Attribute categories are randomly displayed and can vary by configurator session.",
+      "B. Attribute categories are displayed based on the sequence defined on the Attribute Category records, with Uncategorized displayed at the end.",
+      "C. Attribute categories are displayed in alphabetical order, with Uncategorized displayed at the end."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A sales rep needs to renew multiple assets acquired at different times with different expiration dates. When selecting multiple assets for renewal, some assets have already expired. What should the sales rep do to renew all of the assets?",
+    "options": [
+      "A. Update the End Dates on the assets to the current dates, then renew.",
+      "B. Use the Amend option, override the Term, then renew.",
+      "C. Use the Override Renewal Term option, then renew."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A customer is delinquent on their payments. How should a Revenue Cloud Consultant stop invoicing the customer’s account?",
+    "options": [
+      "A. Assign themselves the Billing Administrator permission set, navigate to Scheduled Jobs, and delete the invoice scheduler’s scheduled jobs.",
+      "B. Assign themselves the Billing Operations User permission set, go to the customer’s account, and delete their related pending invoices.",
+      "C. Assign themselves the Billing Administrator permission set, go to the customer’s account, and use the Suspend Billing button."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A streaming service company is implementing Revenue Cloud. The company strives to provide fast, reliable, high-quality streaming services. It is running a promotion for new customers offering a 100% discount on the first month. Streaming costs increase yearly, and the company wants to clearly show customers these price changes during the sales cycle. The minimum contract term is 36 months. How should the Revenue Cloud Consultant meet this requirement?",
+    "options": [
+      "A. Enable Ramp Deals. Configure Product Ramp Segment with Segment Type of Free Trial and Monthly. Associate both segment types to the product.",
+      "B. Enable Ramp Deals. Configure Product Ramp Segment with Segment Type of Free Trial and Yearly. Associate both segment types to the product.",
+      "C. Enable Ramp Deals. Configure Product Ramp Segment with Segment Type of Free Trial and Custom. Associate both segment types to the product."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A cloud storage company offers a subscription service where customers pay a base platform fee plus usage-based charges. For an Enterprise tier, pricing varies by storage, data transfer, and API calls, with tiered pricing where rates decrease at higher volumes. The company needs an automated way to manage the entire lifecycle of consumption-based products. How should a solution architect use Revenue Cloud to meet this requirement?",
+    "options": [
+      "A. Build a custom solution with Apex and custom objects to store usage data and batch calculate charges.",
+      "B. Use Digital Wallet Management Consumption to sell usage products and track drawdowns.",
+      "C. Use Usage Management to automatically ingest, aggregate, and rate consumption data against the products and pricing schedules defined in the Salesforce Product Catalog."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "After a quote is created from amending a bundle asset, a user unselects a bundle component inside the configurator and saves and exits to the Transaction Line Editor. How will the user identify the unselected bundle component?",
+    "options": [
+      "A. No line items will be displayed for the unselected component.",
+      "B. It will show a red cancel tag next to the product that was unselected, and the quantity will be -1.",
+      "C. The line item status field will show “Canceled”, and quantity will be 1."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "When a sales user is amending assets, the amendment quote does not have a contract populated. What is the reason?",
+    "options": [
+      "A. The amendment operation has been started after Renewal.",
+      "B. The amendment operation has been started from the Account.",
+      "C. The amendment operation has been started from the Contract."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A product administrator has been asked to set up product visibility in the Browse Catalog phase based on a customer's region. Which Revenue Cloud specific capabilities should the product administrator use to satisfy this requirement?",
+    "options": [
+      "A. Create a custom decision table that stores product and region availability data.",
+      "B. Create a separate price book per customer region and use it in quote or order.",
+      "C. Modify the out-of-the-box decision table for Product Qualification and Qualification Rule Procedures."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers (UC) sells complex Enterprise Connectivity Suites made up of physical hardware, cloud software, and services. Each component demands a unique fulfillment process, but UC’s current system treats all orders uniformly, causing delays and errors. UC needs to break down complex orders, apply custom fulfillment plans per product, and ensure tailored delivery. Which Revenue Cloud capability should solve UC’s problems with accurate order fulfillment?",
+    "options": [
+      "A. Dynamic Revenue Orchestrator (DRO)",
+      "B. Product Configurator",
+      "C. Salesforce Experience Cloud for customer portals"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A solution architect notices that a complex product bundle uses multiple nested Constraint Modeling Language (CML) rules to enforce constraints during product configuration. Users report long load times when adding options to the bundle. What should the architect do to improve configuration performance and ensure quotes remain technically and commercially viable?",
+    "options": [
+      "A. Refactor and simplify CML constraints to reduce runtime complexity.",
+      "B. Disable constraint rules during configuration and validate selections after deployment.",
+      "C. Replace CML entirely with Apex triggers to enforce constraints at quote submission."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A business user wants to use advanced Revenue Cloud capabilities to gain a comprehensive view of the company’s financial health, from initial quote to final cash collection. They need to track sales performance, forecast revenue, and monitor customer trends. Which Revenue Cloud reporting feature should the business user use?",
+    "options": [
+      "A. Pricing Operations Console",
+      "B. Revenue Management Intelligence",
+      "C. Revenue Lifecycle Management"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant is configuring Invoice Management for a multinational corporation operating in several countries, each with its own tax rules and invoicing regulations. The consultant must ensure that billing and tax calculations are applied correctly per region. Which object should the consultant use to represent each regional business unit and define its specific billing and tax configurations?",
+    "options": [
+      "A. Legal Entity",
+      "B. Billing Schedule Group",
+      "C. Billing Profile"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A company uses Revenue Cloud to sell complex product bundles that include subscriptions, addons, and optional services. Sales reps sometimes accidentally select incompatible options, causing errors and rework. A consultant must ensure that sales users can only select valid product combinations during configuration. Which solution should the consultant implement?",
+    "options": [
+      "A. Rely on automated flow processes during quote approval to catch incompatible product selections before finalizing.",
+      "B. Implement Constraint Rules in the Product Configurator to enforce compatibility between products during configuration.",
+      "C. Use validation rules on the Quote object to prevent saving invalid product combinations after configuration is complete."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A consultant is preparing to enable multicurrency in an org that already has active pricing procedures linked to predefined Salesforce Pricing decision tables. The consultant notices that the Currency field is not available to select within the pricing procedure. What should the consultant do to resolve this?",
+    "options": [
+      "A. Clone the pricing procedure and create a new decision table with the Currency field. Link the new table to the cloned procedure and swap it into setup.",
+      "B. Deactivate the pricing procedure and the associated decision table, then enable multicurrency and add the Currency field to the decision table before reactivating them.",
+      "C. Enable multicurrency in the org, then wait a few minutes for the Currency field to become available for use in the pricing procedure and related decision tables."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "What should business stakeholders and product owners do to ensure a successful discovery and design phase in a Revenue Cloud project?",
+    "options": [
+      "A. Review all available APIs on the Revenue Cloud Developer Guide.",
+      "B. Review and map customer challenges to Revenue Cloud features.",
+      "C. Create a list of key challenges and success metrics for the project."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A sales rep needs to renew multiple assets. Some assets can be renewed at the same prices and do not require negotiation, so the rep can directly create a renewal order. Other assets need higher prices and require a quote for negotiation. When the sales rep starts the renewal process, they cannot choose whether to create a quote or an order. How should a Revenue Cloud Consultant address this issue?",
+    "options": [
+      "A. Change the Revenue Cloud settings to allow renewal quote and order creation.",
+      "B. Override the standard Salesforce flow to allow renewal quote and order creation.",
+      "C. Customize the Manage Asset component to allow renewal quote and order creation."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant confirmed that a user has the correct permissions and license access to view and amend assets. However, when the user navigates to the Account page, they do not see any assets available for amendment, even though active assets exist. What is the reason the user cannot see the assets?",
+    "options": [
+      "A. The Managed Asset Viewer component and the Asset related list are missing from the Account page layout.",
+      "B. The asset records have expired and, as a result, are no longer displayed on the Account page.",
+      "C. The consultant needs to set up the Amend, Renew, and Cancel flow to allow amendments and renewals."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A Contract Lifecycle Management (CLM) consultant needs to create a report on Clauses using record type to capture metadata for clauses and sections within documents. They plan to add fields from related contracts, clauses, and clause sets to customize the report layout, then use this report type for detailed analysis. Which object should the consultant use to create this report?",
+    "options": [
+      "A. Document Clause",
+      "B. Document Template",
+      "C. Document Authored Content"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers (UC) sells multiple smartphone models within its Apex series. It currently creates individual decomposition rules in Dynamic Revenue Orchestrator (DRO) for each model. UC wants a single standardized decomposition rule across all similar Apex series phones. Which strategic Product Catalog Management approach should UC use to enable a single decomposition rule for similar products?",
+    "options": [
+      "A. Product Attributes",
+      "B. Product Catalog",
+      "C. Product Classification"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "During a transaction, which capability does the Transaction Line Editor provide?",
+    "options": [
+      "A. Drag to Sort",
+      "B. Filtering",
+      "C. Auto Save Changes"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A critical manual review step in the order fulfillment process is designed to take up to 60 minutes. The company configures the system to trigger an alert if the task is not completed 15 minutes before its scheduled end. Based on this scenario, which key parameters were configured in the Dynamic Revenue Orchestrator (DRO) system to manage this SLA?",
+    "options": [
+      "A. Completion Deadline and Warning Interval",
+      "B. Task Priority and Escalation Rule",
+      "C. Estimated Duration and Jeopardy Threshold"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A consultant is setting up a new product in the product catalog. They already created a Product Classification and a set of Product Attributes, but the attributes are not appearing when viewing the product in the workspace. What is the cause of this error?",
+    "options": [
+      "A. The consultant did not activate the attribute group in the Product Workspace.",
+      "B. The consultant forgot to publish the product in the product catalog.",
+      "C. The consultant did not assign the attributes to the Product Classification."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud sales user is working with a customer who wants to use their own service order in a .docx file format. The customer needs to provide additional details for a contract to include their own custom terms. Which option in the versioning process supports this requirement?",
+    "options": [
+      "A. Import Contract",
+      "B. Generate Contract from a Template",
+      "C. Modify Contract in Microsoft 365 editor"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Sales users do not want to select a catalog every time they choose products from Product Discovery because they only have one catalog. What should a consultant do using out-of-the-box capabilities?",
+    "options": [
+      "A. Customize the Product Discovery flow.",
+      "B. Select a default catalog under Product Discovery Settings.",
+      "C. Skip creating catalogs and use Product records directly."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant is creating a persona-based permission set group to allow users to create and update records and to test bundle configurations in Product Catalog Management and Browse Catalog. Which set of permissions is required for this persona?",
+    "options": [
+      "A. Product Catalog Management Designer, Product Configuration Rules Designer, Product Configurator",
+      "B. Product Catalog Management Designer, Product Discovery User, Product Configurator",
+      "C. Product Catalog Management Designer, Advanced Configurator Designer, Product Discovery User"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud Consultant manages a product catalog serving multiple regions and customer segments. The team wants to dynamically control product visibility based on criteria such as region, industry, or customer type. What is the recommended approach?",
+    "options": [
+      "A. Use multiple price book entries and assign different price books to users based on region.",
+      "B. Create separate catalogs and categories for each customer segment.",
+      "C. Use qualification rules to control product visibility based on business criteria."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A Revenue Cloud project requires that a contract agreement dynamically hide or show clauses based on Account-specific fields. Which token should the implementation consultant use on the document template to show the appropriate clauses at runtime?",
+    "options": [
+      "A. Variable tokens",
+      "B. Conditional evaluation tokens",
+      "C. Repeating content tokens"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A user quotes a product and ramps it with three custom ramp segments. The first segment starts on January 1, 2025, and lasts for 6 months. The second segment’s term is 12 months, and the last segment’s term is 6 months. After the quote is ordered, which Asset and Asset State Period records are generated, and with what dates for this quote line?",
+    "options": [
+      "A. Three Asset records, with three Asset State Periods on each Asset record with the following dates: 1st Jan 2025 to 30th Jun 2025 1st Jul 2025 to 30th Jun 2026 1st Jul 2026 to 31st Dec 2026",
+      "B. One Asset record, with three Asset State Periods of the following dates: 1st Jan 2025 to 30th Jun 2025 1st Jul 2025 to 30th Jun 2026 1st Jul 2026 to 31st Dec 2026",
+      "C. One Asset record, with three Asset State Periods of the following dates: 1st Jan 2025 to 30th Jun 2025 1st Jan 2025 to 30th Jun 2026 1st Jan 2025 to 31st Dec 2026"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A customer uses a price book to populate list prices. They need to override the list price by 10% if the product is being sold in an emerging market. The emerging market is identified on the quote via a custom field. What should a pricing designer do to solve this?",
+    "options": [
+      "A. Use a formula-based pricing element to apply an override to the list price and use that to populate the list price for further calculations like total, discount, net prices, etc.",
+      "B. Use a formula-based pricing element to apply the override to the unit price and use that to populate the list price for further calculations like total, discount, net prices, etc.",
+      "C. Use a formula-based pricing element to apply an override to the list price value and populate a line item custom field for further calculations like total, discount, net prices, etc."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A customer owned an asset for 2 years, from January 1, 2024, through December 31, 2025. The customer missed the January 1, 2026, renewal but now wants to renew starting February 1, 2026. What is the recommended approach?",
+    "options": [
+      "A. Use Override Renewal Term and provide the start date of February 1, 2026.",
+      "B. Add the same asset as a new line on the renewal quote with a start date of February 1, 2026.",
+      "C. Start a new initial sale with the same asset with a start date of February 1, 2026."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A pricing administrator must provide a system discount based on certain characteristics of a product. The “Advanced Training” product is based on a product classification called Training. Training has five attributes defined, each with Yes or No options. The pricing administrator marks three attributes on “Advanced Training” as Price Impacting and then updates Attribute Based Adjustments to finalize all requirements. How many records will this create in the Attribute Discount Entries lookup table?",
+    "options": [
+      "A. 15",
+      "B. 8",
+      "C. 6"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A product has a list price of US$15,000. An attribute-based price override of $12,000 is applied first, followed by a $1,000 bundle-based adjustment discount and a 10% manual discount at the end of the product sale. What will be the final price of the product shown in the Net Price column of the Transaction Line Editor?",
+    "options": [
+      "A. $9,900",
+      "B. $9,500",
+      "C. $1,800"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "During a Revenue Cloud project, how should the team align stakeholders and roles to ensure a successful implementation?",
+    "options": [
+      "A. Assign power users only for testing, review dependencies at deployment, and limit role mapping to technical phases.",
+      "B. Identify champions and power users early, plan cross-team dependencies, and map roles to all project phases.",
+      "C. Choose one champion per team, engage stakeholders mainly during build and test, and map roles later."
+    ],
+    "correct": 1,
+    "multiple": false
+  }
+]

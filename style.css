@@ -810,6 +810,11 @@ body::before {
   box-shadow: 0 6px 16px rgba(16,185,129,0.3);
 }
 
+.cert-icon--revenue {
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  box-shadow: 0 6px 16px rgba(245,158,11,0.3);
+}
+
 .cert-name {
   font-size: 18px;
   font-weight: 700;
@@ -888,6 +893,12 @@ body::before {
 .logo-badge--ba {
   background: linear-gradient(135deg, #10B981, #059669);
   box-shadow: 0 8px 24px rgba(16,185,129,0.35);
+}
+
+/* ── Revenue Cloud accent ── */
+.logo-badge--revenue {
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  box-shadow: 0 8px 24px rgba(245,158,11,0.35);
 }
 
 /* ══════════════════════════════
