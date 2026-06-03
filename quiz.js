@@ -334,21 +334,14 @@ function confirmAnswer() {
 
 function advance() {
   if (INDEX_MODE) {
-    const total = sessionQuestions.length;
-    let nextIdx = -1;
+    const unanswered = questionStates
+      .map((s, i) => i)
+      .filter(i => !questionStates[i].answered);
 
-    for (let i = currentQuestion + 1; i < total; i++) {
-      if (!questionStates[i].answered) { nextIdx = i; break; }
-    }
-    if (nextIdx === -1) {
-      for (let i = 0; i < currentQuestion; i++) {
-        if (!questionStates[i].answered) { nextIdx = i; break; }
-      }
-    }
-
-    if (nextIdx === -1) {
+    if (unanswered.length === 0) {
       showResult();
     } else {
+      const nextIdx = unanswered[Math.floor(Math.random() * unanswered.length)];
       navigateTo(nextIdx);
     }
     return;
