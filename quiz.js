@@ -152,10 +152,8 @@ function startSession(simuladoIndex) {
     const start = simuladoIndex * SIMULADO_SIZE;
     const end = (simuladoIndex === numSimulados - 1) ? total : (simuladoIndex + 1) * SIMULADO_SIZE;
     sessionQuestions = quizData.slice(start, end);
-    shuffle(sessionQuestions);
   } else {
     currentSimulado = null;
-    shuffle(quizData);
     sessionQuestions = quizData.slice(0, SESSION_SIZE);
   }
 

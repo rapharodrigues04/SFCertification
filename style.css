@@ -950,14 +950,16 @@ body::before {
 
 .index-grid {
   display: none;
-  flex-wrap: wrap;
   gap: 5px;
   padding: 4px 0 14px;
 }
-.index-grid.open { display: flex; }
+.index-grid.open {
+  display: grid;
+  grid-template-columns: repeat(20, minmax(0, 1fr));
+}
 
 .index-btn {
-  width: 30px;
+  width: 100%;
   height: 30px;
   border-radius: 50%;
   border: 1.5px solid var(--border);
@@ -1084,6 +1086,8 @@ body::before {
   .hub-title { font-size: 28px; }
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
   .question-index-panel { order: 10; border-top: 1px solid var(--border); padding-top: 0; }
+  .index-grid.open { display: flex; flex-wrap: wrap; }
+  .index-btn { width: 30px; }
   .simulado-grid { grid-template-columns: 1fr; }
 }
 
