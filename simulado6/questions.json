@@ -1,0 +1,562 @@
+[
+  {
+    "question": "New interns at Universal Containers have been tasked with following a new process to import leads from a spreadsheet into Salesforce. A business analyst is mapping the process to document the overall lead creation process. What should the process map look like?",
+    "options": [
+      "A. A very detailed process map that is unambiguous and version controlled",
+      "B. A somewhat detailed process map that is easy to remember and self-explanatory",
+      "C. A simple process map that is high-level and covers key aspects"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A business analyst (BA) at Northern Trail Outfitters is mapping a workflow process to onboard a new user group to a Service Cloud implementation. Which level of detail should the BA use for the process map and why?",
+    "options": [
+      "A. Very detailed—It should be prescriptive for new users following an unfamiliar process.",
+      "B. Somewhat detailed—Since the process will be repetitive, new users will learn and remember the details.",
+      "C. Simple—A high-level overview of the process is sufficient to show a new user experience."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "The business analyst (BA) at Cloud Kicks has been interviewing customer service team members who use Service Cloud to understand the steps they take to complete their daily work. The BA is working on a solution to improve their productivity by identifying each step and documenting its purpose. Which type of requirement documentation is the BA using in this scenario?",
+    "options": [
+      "A. Process mapping",
+      "B. Value stream mapping",
+      "C. Data modeling"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "The business analysis (BA) at Northern Trail Outfitters is assigned to a project to help revamp its Experience Cloud implementation. When assessing the existing process, which type of diagram should the BA use to identify waste within and between processes?",
+    "options": [
+      "A. Suppliers, Inputs, Process, Outputs, Customers (SIPOC) Map",
+      "B. Detailed Process Map",
+      "C. Value Stream Map"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "Which type of process diagram should the business analyst use at the beginning of a Salesforce project to outline high-level process areas such as 'Prospect to Contract'?",
+    "options": [
+      "A. Capability model",
+      "B. SIPOC (Suppliers, Inputs, Process, Outputs, Customers)",
+      "C. Value stream map"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers is focused on an initiative to streamline its channel management processes. Due to the level of complexity, the business analyst (BA) will gather and document the key points in preparation to build a more detailed process map. Which diagram should the BA use in this case?",
+    "options": [
+      "A. SIPOC (Suppliers, Inputs, Process, Outputs, Customers)",
+      "B. Capability Model",
+      "C. Value Stream Map"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A business analyst (BA) at Cloud Kicks has been tasked with preparing for requirements gathering workshops for an upcoming Sales Cloud implementation. Which documentation is most beneficial for the BA to define the scope of the project?",
+    "options": [
+      "A. Detailed Process Map",
+      "B. Value Stream Map",
+      "C. Suppliers, Inputs, Process, Outputs, Customers (SIPOC) Map"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A business analyst (BA) at Universal Containers (UC) has been asked to evaluate a business process at a high level and in detail, while also keeping regulatory considerations in mind. Management wants to use the output from the BA's evaluation to inform decisions about UC's future implementations of Sales Cloud and Service Cloud. What should the BA use for their evaluation?",
+    "options": [
+      "A. Cross-functional flowchart",
+      "B. Entity Relationship Diagram (ERD)",
+      "C. Universal Process Notation (UPN)"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers has asked a business analyst (BA) to create a process map indicating how it is using Marketing Cloud to manage its campaigns. In a process map that uses Universal Process Notation (UPN), the BA has marked each activity box with a resource. What does an activity box marked 'C Customer' mean?",
+    "options": [
+      "A. The customer should be responsible.",
+      "B. The customer should be informed.",
+      "C. The customer should be consulted."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers (UC) has chosen to implement Sales Cloud and Service Cloud to increase revenue and remove bottlenecks in its current processes. A business analyst (BA) is tasked with diagramming business processes. What should the BA do to successfully meet governance requirements to identify the business purpose?",
+    "options": [
+      "A. Use UC's existing terminology.",
+      "B. Adhere to agreed upon mapping standards.",
+      "C. Identify resources engaged in each step."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "The business analyst (BA) at Northern Trail Outfitters needs to create a current state process map for a Service Cloud implementation with its retail division. The BA needs a simple diagramming notation for the process map that is applicable across all industries, provides context for metrics and management decisions, and supports regulatory considerations. Which diagramming notation should the BA use for the process map?",
+    "options": [
+      "A. Business Process Modeling Notation (BPMN)",
+      "B. Universal Process Notation (UPN)",
+      "C. Unified Modeling Language (UML)"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "The business analyst (BA) at Cloud Kicks is working on improving the company's Service Cloud deployment. The BA wants to leverage Universal Process Notation (UPN) to document the current process. What is one benefit of using UPN in this scenario?",
+    "options": [
+      "A. Complex processes can be documented with 20 or more activity boxes.",
+      "B. A single activity box can answer Who, What, When, Why, and How.",
+      "C. Processes can be documented without involving stakeholders."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "Northern Trail Outfitters wants to reduce the amount of time it takes for customers to receive their orders after making an online purchase. Which initial steps should the business analyst take to help determine why the order management and fulfillment process is slow?",
+    "options": [
+      "A. Work with stakeholders to identify relevant processes, select a key process with defined start and end points, and collaborate with process owners and users to create a current state process map.",
+      "B. Conduct interviews with stakeholders in the order management and fulfillment departments to identify individual pain points and brainstorm process improvement solutions.",
+      "C. Create a process map that includes detailed steps related to order management and fulfillment, analyze the process map for inefficiencies, and present findings to leadership."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Northern Trail Outfitters (NTO) wants to address a recent group of complaints it received from the service team. The NTO Salesforce team was alerted that the current routing process is preventing cases from reaching the correct service team without manual intervention. Which action should the business analyst take to best understand and document the current state and recommend a future state?",
+    "options": [
+      "A. Organize a brainstorming session with service team leadership.",
+      "B. Engage in a live process modeling exercise with the service team.",
+      "C. Review individual surveys and questionnaires from the service team."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A business analyst has been asked to evaluate all of the reporting tools that Universal Containers (UC) currently uses, including CRM Analytics, to identify gaps and overlaps in functionality. Which tool would help UC understand the existing functionality?",
+    "options": [
+      "A. Value stream map",
+      "B. Capability model",
+      "C. Process map"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "An executive stakeholder at Northern Trail Outfitters (NTO) wants to explore automating NTO's Quote-to-Cash process and has asked the business analyst (BA) to pull together some high-level information on possible solutions. Which type of document should the BA present to the stakeholders?",
+    "options": [
+      "A. A capability map detailing the functionality of Salesforce and AppExchange Quote-to-Cash products",
+      "B. A SIPOC map outlining the Quote-to-Cash process",
+      "C. A business process map detailing the existing step-by-step Quote-to-Cash process"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Northern Trail Outfitters is implementing Marketing Cloud. Stakeholders are having a difficult time conceptualizing how Marketing Cloud uses insights to create journeys. The Business analyst (BA) has been asked to show stakeholders how it works so the implementation project can move forward. Timelines are too tight to present a demo, and approval from stakeholders is needed soon. What should the BA do to help stakeholders visualize how it will work?",
+    "options": [
+      "A. Create a UPN (Universal Process Notation) diagram.",
+      "B. Build a capability model.",
+      "C. Schedule a storyboarding session."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "Northern Trail Outfitters has a large Salesforce org with sales, marketing, and billing teams pushing for the development of a large number of items in the backlog. Which management process should the business analyst suggest to help the teams align on their competing priorities?",
+    "options": [
+      "A. Integrated Definition for Process Description Capture Method (IDEF3)",
+      "B. Vision, Values, Methods, Obstacles, and Measures (V2MOM)",
+      "C. Business Process Modeling Notation (BPMN)"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "The business analyst (BA) at Cloud Kicks is beginning to write user stories for its Salesforce implementation. Which three components should be included when writing a user story?",
+    "options": [
+      "A. Who, what, why",
+      "B. When, where, why",
+      "C. Who, when, why"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers is developing a new case management solution in Salesforce. The business analyst has started writing user stories to capture feature needs. One user story is: 'The customer care representative wants to take ownership of new cases and communicate with customers so they can provide high-touch customer experiences.' Which component of the user story is 'provide high-touch customer experiences'?",
+    "options": [
+      "A. Where",
+      "B. Why",
+      "C. What"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "The sales team at Cloud Kicks recently received training on a new sales methodology. When viewing an Opportunity in Sales Cloud, the sales manager wants the sales cycle to include new stages in addition to multiple custom fields. The business analyst is starting to construct user stories to support the new process. What should each user story include?",
+    "options": [
+      "A. Value, purpose, and need",
+      "B. Who, what, and why",
+      "C. Who, where, and how"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "Cloud Kicks is planning to create a new Service Cloud console app for its services team to resolve issues with delayed shipments to customers. The business analyst (BA) wrote the user stories based on a written list of requirements provided by the manager of the services team. Upon stakeholder review with the entire services team, many of the user stories were rejected and the BA had to revise them. When the BA wrote the initial user stories, what was the likely cause of the issue?",
+    "options": [
+      "A. The user stories focused on well-defined personas.",
+      "B. The project team failed to discuss the user stories as a group.",
+      "C. The acceptance criteria of the user stories were too specific."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A sales manager at Cloud Kicks recently learned about Salesforce Macros and believes service agents could benefit from the feature. The sales manager created the following user story: 'As a service agent I want Salesforce Macros to complete repetitive tasks faster.' What should the business analyst change to improve the user story?",
+    "options": [
+      "A. Replace the specific feature with a goal.",
+      "B. Change the user story to the sales manager persona.",
+      "C. Add a quantifiable reason why the feature is needed."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "Cloud Kicks is implementing cases to handle its growing volume of customer inquiries. The business analyst (BA) on the implementation has 2 years of experience with Service Cloud. This is one of the user stories the BA wrote: 'A customer service representative wants to use Salesforce Macros to update notes and change the case status to close to reduce the time spent on each case.' Which mistake did the BA make when writing this user story?",
+    "options": [
+      "A. The incorrect persona was used in the story.",
+      "B. The story included feature-specific language.",
+      "C. The story explained the value to the user."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers has asked a business analyst (BA) to assist the sales management team with a request for a new picklist field called 'Lost Reason' on the Opportunity object. After mapping the managers to the sales leader persona and obtaining feedback from them, the BA discovered that the managers want to better understand Closed/Lost Opportunities so they can help sales teams close more deals. Which option should the BA use to construct the user story?",
+    "options": [
+      "A. As a sales leader, I want to see more details on Closed/Lost Opportunities so I can help the sales team improve close rates.",
+      "B. As a sales team member, I need additional enablement training and reporting information to help improve close rates.",
+      "C. As a sales leader, I need a new 'Closed/Lost Reason' picklist field on Opportunities and better reports to help the sales team improve close rates."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "The Salesforce delivery team at Cloud Kicks consistently has user stories that developers start but are unable to complete during each sprint. During the most recent retrospective, the development team expressed that they are running out of time to complete the stories. The team used the INVEST checklist to diagnose why these stories are incomplete at the end of the sprint. Which checklist item is the most likely reason why the stories are incomplete at the close of the sprint?",
+    "options": [
+      "A. Negotiable",
+      "B. Valuable",
+      "C. Small"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A business analyst (BA) working on a Service Cloud implementation is reviewing user stories to verify they are written effectively. What should the BA confirm about the user stories when completing this review?",
+    "options": [
+      "A. They contain substantial details and focus on technical elements.",
+      "B. They are dependent on related acceptance criteria and overlap with other use cases.",
+      "C. They can be easily prioritized and are small enough to estimate accurately."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "As a business analyst (BA) starts engaging stakeholders for a user story writing workshop, an executive sponsor questions why the Commerce Cloud project is creating user stories rather than standard requirements. What is one benefit of creating user stories that the BA can share with the executive sponsor?",
+    "options": [
+      "A. It defines technical specifications early in the process.",
+      "B. It helps testers determine the most efficient way to validate solutions.",
+      "C. It saves time when prioritizing and implementing functionality."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "At the start of a new Agile development project, the Universal Containers' product owner asked the business analyst (BA) to clearly define the intended results of the work based on stakeholder needs. The development and implementation teams will use the intended results to plan product decisions. The definition should avoid assumptions and focus on stakeholder value. Which element should the BA choose to define the intended results?",
+    "options": [
+      "A. Requirements",
+      "B. User stories",
+      "C. Epics"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "The quality assurance (QA) team at Cloud Kicks is reviewing user stories to write test scripts. The QA team is having difficulty with a specific story where a modification to an existing flow is needed for a custom object. The QA team is unable to discern what needs to be tested as a result of the updated flow. What should the business analyst review and revise to provide more clarity to the QA team?",
+    "options": [
+      "A. The who, what, and why of the user story",
+      "B. The acceptance criteria of the user story",
+      "C. The definition of done of the user story"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "The development team at Universal Containers is reviewing several stories to be added to the current sprint. The team is having trouble with a particular story about an Opportunity email alert and is unsure about which type of testing is needed. What should the business analyst review and revise to provide more clarity to the team?",
+    "options": [
+      "A. Definition of done",
+      "B. User persona",
+      "C. Acceptance criteria"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers is integrating its enterprise resource planning (ERP) with Salesforce to gain inventory visibility for the sales team. One of the user stories for this project is: 'As a sales rep, I want to be able to find containers close to my customer so I can tell them which products they can receive quickly.' Which acceptance criteria is most appropriate for this story?",
+    "options": [
+      "A. Sales rep can see the inventory closest to a customer with a quick action.",
+      "B. As a sales rep, I see the inventory closest to a customer.",
+      "C. Sales rep can see the inventory closest to a customer."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Business analyst (BA) at Universal Containers looks at the user stories for a new implementation of the Salesforce Customer Data Platform (CDP) and notices they are too large. The BA recommends that the large stories be broken down into smaller stories which will decrease the future level of effort for subsequent acceptance. Which activity will be most impacted by breaking down the user stories?",
+    "options": [
+      "A. Estimation",
+      "B. Defining the persona",
+      "C. Acceptance criteria"
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "The sales team recently received training on a new sales methodology and the architect expressed their concerns to the BA that they lack a comprehensive list of the components that will be affected by the updated flow. Which best practice should the BA follow?",
+    "options": [
+      "A. Write the user story without making any assumptions about how it will be implemented or which components are affected.",
+      "B. Ask the development team to investigate and document all affected components before the story can be written.",
+      "C. Schedule additional discovery sessions with the sales users to understand what will be impacted by the changes."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "At Universal Containers, a business analyst (BA), solution architect, lead developer, quality assurance lead, and other team members need access to user stories as part of the Agile lifecycle of enhancements to a Marketing Cloud integration project. What should the BA do to give all team members access and visibility to the most recent user stories as the project is in motion?",
+    "options": [
+      "A. Define a common repository to hold all user stories and track changes over time.",
+      "B. Allow each team member to merge all user stories at the end of user acceptance testing.",
+      "C. Send emails to stakeholders with all of the changes to the user stories."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "The business analyst at Cloud Kicks received verbal acceptance of all user stories by the product owner and set the status of the user stories to 'Ready for Development' on a spreadsheet. The development team later reports they are unable to confirm which user stories are ready to be built. What is the most likely cause?",
+    "options": [
+      "A. The user stories were saved outside of a shared repository.",
+      "B. The definition of done of the user stories was unclear.",
+      "C. The acceptance criteria of the user stories were incomplete."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers is developing a new recurring app utilizing Lightning screen flows. The business analyst (BA) has started writing user stories in a repository. The project lead has edited user stories in the DevOps tool to make them more complete. What should the BA do to understand which user stories were modified?",
+    "options": [
+      "A. Review the approval history.",
+      "B. Review the change sets history.",
+      "C. Review the version control history."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "A new employee at Universal Containers just sent the business analyst (BA) a Slack message with an attachment named UserStories_v37_final_final_final.docx. Which best practice should the BA train the employee on first?",
+    "options": [
+      "A. Use standard naming conventions.",
+      "B. Use acceptance criteria to define success.",
+      "C. Use a version control repository."
+    ],
+    "correct": 2,
+    "multiple": false
+  },
+  {
+    "question": "The sales team at Cloud Kicks is rolling out a new sales methodology. To incorporate the requested changes, the business analyst working with the technical team identifies several integrations that touch the Opportunity object and could be impacted by the changes. The project manager wants the solution to include unit testing, code reviews, and functional testing. What does the project team need to agree upon to ensure the work is ready to be deployed?",
+    "options": [
+      "A. Entity relationship diagram",
+      "B. Definition of done",
+      "C. User acceptance criteria"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers is planning to implement Commerce Cloud to sell more products. The business analyst working on this project has gathered requirements and is translating them into user stories. What should the user story focus on?",
+    "options": [
+      "A. Sales margins",
+      "B. Customer experience",
+      "C. Product functionality"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A business analyst (BA) at Universal Containers is conducting discovery sessions for implementing Experience Cloud. The key stakeholders have been assembled. The user stories have been written. What should the BA do next?",
+    "options": [
+      "A. Write the test scripts.",
+      "B. Define the acceptance criteria.",
+      "C. Plan the sprint schedule."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "The business analyst (BA) at universal Containers is grooming user stories to add to the next sprint. The BA is having difficulty understanding the level of testing that's necessary for a particular story involving an update to an important trigger. What should the BA do to address the need for user acceptance testing (UAT)?",
+    "options": [
+      "A. Run all Apex tests using change set validation.",
+      "B. Gather testing requirements from the stakeholder.",
+      "C. Perform testing on all objects in the trigger."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "Cloud Kicks will launch a new customer experience portal. During discussions with the VP of customer service, a business analyst (BA) recorded the following: All logins must use multi-factor authentication (MFA). Portal pages should load within 2 seconds. How should the BA document these items?",
+    "options": [
+      "A. Functional requirement",
+      "B. Non-functional requirement",
+      "C. User story"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers recently kicked off a project to build an Experience Cloud solution for partners. Partners need to upload their monthly sales reports to this account portal. Which option should the business analyst use as the functional requirement specification?",
+    "options": [
+      "A. Partners need to submit monthly sales reports.",
+      "B. The portal should allow for partners to upload monthly sales reports.",
+      "C. The portal should allow for partners to access monthly sales reports."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "The Salesforce project team at Universal Containers is reviewing a backlog of user stories to add to a sprint. The team is unsure of which story to begin working on. What should the business analyst do to help with prioritization?",
+    "options": [
+      "A. Verify acceptance criteria.",
+      "B. Identify dependent components.",
+      "C. Delete the definition of done."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "The project manager for Universal Containers tells the business analyst (BA) that the developers on the team are having trouble understanding what to build because the acceptance criteria for the Sales Cloud user stories are confusing. How should the BA respond to the feedback effectively?",
+    "options": [
+      "A. Recommend additional training resources.",
+      "B. Ask for specific examples to review.",
+      "C. Confirm that best practices are being followed."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A business analyst (BA) is working with a sales team on a user story: 'As a sales manager, I want a dashboard of my team's opportunities.' The BA notices this story is missing a key component. What is missing?",
+    "options": [
+      "A. The 'why' — the business value or goal the user wants to achieve.",
+      "B. The 'what' — the specific feature being requested.",
+      "C. The 'who' — the persona of the person making the request."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Northern Trail Outfitters follows an Agile methodology for its Marketing Cloud projects. The project team creates several types of documents. Which document should a business analyst use to capture the software and behavioral requirements of the application?",
+    "options": [
+      "A. Scope statement specification",
+      "B. Functional requirements specification",
+      "C. System requirements specification"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "Which option captures this requirement correctly: 'The email template must be user-friendly and accessible only by members of the account team'?",
+    "options": [
+      "A. Make the template user-friendly and accessible only by members of the account team.",
+      "B. The sales manager can make the template user-friendly.",
+      "C. Accessible by members of the account team."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "The Business analyst (BA) at Northern Outfitters (NTO) has gathered preliminary functional requirements for an upcoming Salesforce implementation project. Before translating these requirements into user stories, the BA wants to gain additional perspective, feedback, and detail on the requirements from the NTO team. Which document should help the BA gather this information?",
+    "options": [
+      "A. Stakeholder analysis",
+      "B. Requirements review document",
+      "C. Gap analysis"
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "A business analyst (BA) is preparing for user acceptance testing for case management scenarios in Service Cloud. What should the BA do to help prevent gaps from being discovered after go live?",
+    "options": [
+      "A. Focus more on happy path testing and less on edge case testing.",
+      "B. Write test scripts that reflect real life and cover the requirements.",
+      "C. Streamline testing by limiting the number of testers involved."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "Cloud Kicks is creating a new lead conversion process in Sales Cloud. During a recent sprint, the business analyst created user stories related to the Opportunity object. All of the test scripts passed and the new functionality was deployed. After deployment, end users reported error messages when manually creating new Opportunities. Which area of user acceptance testing (UAT) was overlooked?",
+    "options": [
+      "A. Functionality on interconnected objects should be part of UAT.",
+      "B. Several teams should be part of UAT to represent multiple viewpoints.",
+      "C. End users who are experts in that functionality should participate in UAT."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Universal Containers (UC) has chosen to implement Sales Cloud. A business analyst (BA) is reviewing the business backlog and determines that many requirements would require custom code that is expensive and hard to maintain. Who should own the process of prioritizing the business backlog?",
+    "options": [
+      "A. The third-party implementation team, with support from the internal technology teams affected by the project who understand UC's vision and strategy",
+      "B. The business teams affected, with support from the internal technology teams who understand ways to maximize Salesforce's declarative features",
+      "C. The project manager, with support from the third-party implementation and business teams who understand both platform and business priorities."
+    ],
+    "correct": 1,
+    "multiple": false
+  },
+  {
+    "question": "The executive director of Universal Containers (UC) plans to purchase additional Salesforce licenses. The director recently hired a business analyst (BA) to lead a series of journey mapping sessions. The director wants the journey mapping sessions to be tailored to the features and capabilities that are currently available in UC's Salesforce environment. Which information does the BA need to determine the features and functionality UC can implement while avoiding additional costs?",
+    "options": [
+      "A. Organization edition and license type",
+      "B. Storage capacity and license type",
+      "C. Number of active users and license type"
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "Northern Trail Outfitters is undergoing a Service Cloud implementation and has decided to use the Scrum methodology. A business analyst (BA) received an urgent, high-priority change request in the middle of a sprint. Which step should the BA take next?",
+    "options": [
+      "A. Add the change request to the backlog to be prioritized for the next sprint.",
+      "B. De-prioritize some user stories and add the change request to the current sprint.",
+      "C. Immediately implement the change request to satisfy the stakeholder."
+    ],
+    "correct": 0,
+    "multiple": false
+  },
+  {
+    "question": "A business analyst (BA) is reviewing user stories for a Salesforce implementation. The BA notices that one of the acceptance criteria states 'the system should be fast.' What should the BA do to improve this acceptance criteria?",
+    "options": [
+      "A. Remove the acceptance criteria as performance is a technical concern.",
+      "B. Rewrite it with a measurable benchmark, such as 'pages must load in under 3 seconds.'",
+      "C. Escalate it to the technical team to define the threshold."
+    ],
+    "correct": 1,
+    "multiple": false
+  }
+]
