@@ -10,6 +10,7 @@ Plataforma de estudo para certificações Salesforce. Repositório único com qu
 | Agentforce Specialist | `/agentforce` | 73% |
 | Data Cloud Consultant | `/datacloud` | 65% |
 | Business Analyst | `/ba` | 72% |
+| Platform Developer I | `/developer1` | 68% |
 
 ## Como funciona
 
@@ -36,7 +37,10 @@ Plataforma de estudo para certificações Salesforce. Repositório único com qu
 ├── datacloud/
 │   ├── index.html
 │   └── data_cloud_consultant.json
-└── ba/
+├── ba/
+│   ├── index.html
+│   └── questions.json
+└── developer1/
     ├── index.html
-    └── questions.json
+    └── developer.json
 ```

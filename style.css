@@ -815,6 +815,11 @@ body::before {
   box-shadow: 0 6px 16px rgba(245,158,11,0.3);
 }
 
+.cert-icon--developer {
+  background: linear-gradient(135deg, #6366F1, #4338CA);
+  box-shadow: 0 6px 16px rgba(99,102,241,0.3);
+}
+
 .cert-name {
   font-size: 15px;
   font-weight: 700;
