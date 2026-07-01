@@ -1042,7 +1042,7 @@
       "B. Capability model",
       "C. Process map"
     ],
-    "correct": 2,
+    "correct": 1,
     "multiple": false
   },
   {
@@ -1576,16 +1576,6 @@
     "multiple": false
   },
   {
-    "question": "Universal Containers is implementing a Salesforce solution that’s designed to transform its customer service division. During sprint planning, it was determined that the development team would be able to successfully deliver all remaining work items. However, due to unplanned delays, the development team is now at risk of being unable to complete the work items. The project manager has asked for the business analyst’s (BA) help to prioritize the remaining work items. The development team has 16 hours of capacity remaining and is focused on launching a minimum viable product (MVP) of the customer service solution as soon as possible. Which work items should the BA prioritize with the remaining 16 hours of development capacity?",
-    "options": [
-      "A. US-4008 and US-4009",
-      "B. US-4007 and US-4009",
-      "C. US-4009 and US-4010"
-    ],
-    "correct": 1,
-    "multiple": false
-  },
-  {
     "question": "Northern Trail Outfitters follows an Agile methodology for its Marketing Cloud projects. The project team creates several types of documents. Which document should a business analyst use to. capture the software and behavioral requirements of the application?",
     "options": [
       "A. Scope statement specification",
@@ -1652,7 +1642,7 @@
       "B. Why",
       "C. When"
     ],
-    "correct": 1,
+    "correct": 0,
     "multiple": false
   },
   {
@@ -1782,7 +1772,7 @@
       "B. Work includes platform support requiring immediate outage handling.",
       "C. Work is predictable but sometimes lacks sufficient planning."
     ],
-    "correct": 0,
+    "correct": 1,
     "multiple": false
   },
   {
@@ -1962,7 +1952,7 @@
       "B. Change the user story to the sales manager persona.",
       "C. Add a quantifiable reason why the feature is needed."
     ],
-    "correct": 2,
+    "correct": 0,
     "multiple": false
   },
   {
@@ -2082,7 +2072,7 @@
       "B. Configuration allows for any level of complexity.",
       "C. Configuration provides faster speed to market."
     ],
-    "correct": 1,
+    "correct": 2,
     "multiple": false
   },
   {
@@ -2392,7 +2382,7 @@
       "B. De-prioritize some user stones and add the change request to the current sprint.",
       "C. Begin working on the change request as soon as the team has capacity."
     ],
-    "correct": 1,
+    "correct": 0,
     "multiple": false
   },
   {
@@ -2592,7 +2582,7 @@
       "B. Exporting a backup copy of the demo data",
       "C. Performing a code review"
     ],
-    "correct": 2,
+    "correct": 0,
     "multiple": false
   },
   {
