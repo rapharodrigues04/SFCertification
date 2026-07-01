@@ -146,7 +146,7 @@
       "B. Capability model",
       "C. Process map"
     ],
-    "correct": 2,
+    "correct": 1,
     "multiple": false
   },
   {
@@ -226,7 +226,7 @@
       "B. Change the user story to the sales manager persona.",
       "C. Add a quantifiable reason why the feature is needed."
     ],
-    "correct": 2,
+    "correct": 0,
     "multiple": false
   },
   {
